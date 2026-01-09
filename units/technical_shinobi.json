@@ -1,0 +1,15 @@
+{
+  "id": "EXT-RM-005",
+  "name": "Technical Shinobi",
+  "jp_name": "ギコウ・シノビ",
+  "type": "Psychic",
+  "rarity": "Common",
+  "hp": 680,
+  "mp": 150,
+  "atk": 85,
+  "def": 70,
+  "agl": 90,
+  "en_passive": "Smoke Screen: Has a chance to inflict 'Blind' status, causing the enemy to miss their next physical attack.",
+  "jp_passive": "煙幕: 敵に「盲目」状態異常を付与し、次の物理攻撃をミスさせる確率がある。",
+  "ui_color": "Coral"
+}
