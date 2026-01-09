@@ -1,0 +1,15 @@
+{
+  "id": "KR-K-M-001",
+  "name": "Kamen Rider Caucasus",
+  "jp_name": "仮面ライダーコーカサス",
+  "type": "Steel",
+  "rarity": "Common",
+  "hp": 800,
+  "mp": 200,
+  "atk": 120,
+  "def": 100,
+  "agl": 100,
+  "en_passive": "High-Speed Clock Up: Can move twice per turn for a high MP cost.",
+  "jp_passive": "ハイスピードクロックアップ: 高いMPコストを消費して1ターンに2回行動できる。",
+  "ui_color": "Gray"
+}

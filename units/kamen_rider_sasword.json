@@ -1,0 +1,15 @@
+{
+  "id": "KR-K-005",
+  "name": "Kamen Rider Sasword",
+  "jp_name": "仮面ライダーサソード",
+  "type": "Dragon",
+  "rarity": "Common",
+  "hp": 600,
+  "mp": 150,
+  "atk": 95,
+  "def": 65,
+  "agl": 85,
+  "en_passive": "Cast Off: ATK increases by 20% for the first three turns of battle.",
+  "jp_passive": "キャストオフ: バトル開始から3ターンの間、ATKが20%増加する。",
+  "ui_color": "Indigo"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "PC-MT-003",
+  "name": "Cure Felice",
+  "jp_name": "キュアフェリーチェ",
+  "type": "Grass",
+  "rarity": "Common",
+  "hp": 680,
+  "mp": 160,
+  "atk": 95,
+  "def": 70,
+  "agl": 50,
+  "en_passive": "Life Magic: Heals 10% HP at the start of every turn.",
+  "jp_passive": "ライフマジック: 毎ターン開始時にHPを10%回復する。",
+  "ui_color": "Green"
+}

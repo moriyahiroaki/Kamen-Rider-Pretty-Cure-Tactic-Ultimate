@@ -1,0 +1,15 @@
+{
+  "id": "KR-EX-005",
+  "name": "Kamen Rider Genm",
+  "jp_name": "仮面ライダーゲンム",
+  "type": "Poison",
+  "rarity": "Common",
+  "hp": 630,
+  "mp": 150,
+  "atk": 100,
+  "def": 70,
+  "agl": 80,
+  "en_passive": "Dangerous Zombie: Revives once per battle after defeat.",
+  "jp_passive": "デンジャラスゾンビ: バトル中一度だけ、倒されても復活する。",
+  "ui_color": "Violet"
+}

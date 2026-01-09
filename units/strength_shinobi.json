@@ -1,0 +1,15 @@
+{
+  "id": "EXT-RM-003",
+  "name": "Strength Shinobi",
+  "jp_name": "チカラ・シノビ",
+  "type": "Rock",
+  "rarity": "Common",
+  "hp": 850,
+  "mp": 50,
+  "atk": 70,
+  "def": 130,
+  "agl": 20,
+  "en_passive": "Battle Shield: When attacked physically, has a 40% chance to counter-attack for half damage immediately after.",
+  "jp_passive": "バトルシールド: 物理攻撃を受けた際、40%の確率で直後に半分のダメージで反撃する。",
+  "ui_color": "Beige"
+}

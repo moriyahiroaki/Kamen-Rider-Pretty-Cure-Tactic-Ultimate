@@ -1,0 +1,15 @@
+{
+  "id": "PC-KA-004",
+  "name": "Cure Macaron",
+  "jp_name": "キュアマカロン",
+  "type": "Steel",
+  "rarity": "Common",
+  "hp": 680,
+  "mp": 160,
+  "atk": 85,
+  "def": 95,
+  "agl": 40,
+  "en_passive": "Cat Elegance: Evades the first enemy attack in any battle.",
+  "jp_passive": "キャットエレガンス: バトル中の最初の敵の攻撃を回避する。",
+  "ui_color": "Gray"
+}

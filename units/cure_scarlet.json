@@ -1,0 +1,14 @@
+{
+  "id": "PC-GP-004",
+  "name": "Cure Scarlet",
+  "jp_name": "キュアスカーレット",
+  "type": "Fire",
+  "rarity": "Common",
+  "hp": 560,
+  "mp": 170,
+  "atk": 100,
+  "def": 60,
+  "agl": 85,
+  "en_passive": "Phoenix Blaze: Revives once per battle with 30% HP after being defeated.",
+  "ui_color": "Red"
+}

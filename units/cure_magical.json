@@ -1,0 +1,15 @@
+{
+  "id": "PC-MT-002",
+  "name": "Cure Magical",
+  "jp_name": "キュアマジカル",
+  "type": "Ghost",
+  "rarity": "Common",
+  "hp": 530,
+  "mp": 170,
+  "atk": 90,
+  "def": 60,
+  "agl": 75,
+  "en_passive": "Shadow Stealth: Is immune to Normal and Fighting type attacks.",
+  "jp_passive": "シャドウスティルス: ノーマルタイプとかくとうタイプの攻撃を無効化する。",
+  "ui_color": "Purple"
+}

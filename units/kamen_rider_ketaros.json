@@ -1,0 +1,11 @@
+{
+  "id": "KR-K-M-003",
+  "name": "Kamen Rider Ketaros",
+  "jp_name": "仮面ライダーケタロス",
+  "type": "Bug",
+  "rarity": "Common",
+  "hp": 750, "mp": 130, "atk": 100, "def": 90, "agl": 80,
+  "en_passive": "Ketaros Zecter: Takes 10% less damage from Fighting-type attacks.",
+  "jp_passive": "ケタロスゼクター: ファイティングタイプの攻撃から受けるダメージを10%軽減する。",
+  "ui_color": "Lime"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "PC-MT-001",
+  "name": "Cure Miracle",
+  "jp_name": "キュアミラクル",
+  "type": "Fairy",
+  "rarity": "Common",
+  "hp": 500,
+  "mp": 200,
+  "atk": 80,
+  "def": 65,
+  "agl": 40,
+  "en_passive": "Magic User: Gains 1.5x MP from all sources.",
+  "jp_passive": "マジックユーザー: 全ての源泉からMPを1.5倍獲得する。",
+  "ui_color": "Pink"
+}

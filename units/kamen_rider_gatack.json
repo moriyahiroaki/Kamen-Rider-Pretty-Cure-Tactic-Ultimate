@@ -1,0 +1,15 @@
+{
+  "id": "KR-K-002",
+  "name": "Kamen Rider Gatack",
+  "jp_name": "仮面ライダーガタック",
+  "type": "Bug",
+  "rarity": "Common",
+  "hp": 720,
+  "mp": 130,
+  "atk": 90,
+  "def": 90,
+  "agl": 70,
+  "en_passive": "Gatack Double Calibur: ATK increases when in the front row of the 5v5 grid.",
+  "jp_passive": "ガタックダブルカリバー: 5v5グリッドの前列にいる場合、ATKが増加する。",
+  "ui_color": "Lime"
+}

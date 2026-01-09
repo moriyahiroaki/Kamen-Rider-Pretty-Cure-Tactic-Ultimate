@@ -1,0 +1,15 @@
+{
+  "id": "KR-K-006",
+  "name": "Kamen Rider KickHopper",
+  "jp_name": "仮面ライダーキックホッパー",
+  "type": "Fighting",
+  "rarity": "Common",
+  "hp": 680,
+  "mp": 120,
+  "atk": 105,
+  "def": 70,
+  "agl": 90,
+  "en_passive": "Rider Jump: High chance to evade ranged attacks.",
+  "jp_passive": "ライダージャンプ: 遠隔攻撃を高確率で回避する。",
+  "ui_color": "Orange"
+}

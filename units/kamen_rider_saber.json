@@ -1,0 +1,15 @@
+{
+  "id": "KR-S-001",
+  "name": "Kamen Rider Saber",
+  "jp_name": "仮面ライダーセイバー",
+  "type": "Fire",
+  "rarity": "Common",
+  "hp": 680,
+  "mp": 140,
+  "atk": 95,
+  "def": 70,
+  "agl": 60,
+  "en_passive": "Brave Dragon: When HP is below 30%, ATK increases by 1.5x.",
+  "jp_passive": "ブレイブドラゴン: HPが30%以下になると、ATKが1.5倍になる。",
+  "ui_color": "Red"
+}

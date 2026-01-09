@@ -1,0 +1,15 @@
+{
+  "id": "PC-ST-001",
+  "name": "Cure Star",
+  "jp_name": "キュアスター",
+  "type": "Normal",
+  "rarity": "Common",
+  "hp": 650,
+  "mp": 150,
+  "atk": 80,
+  "def": 70,
+  "agl": 60,
+  "en_passive": "Imagination Power: Small chance to avoid fatal damage once per battle.",
+  "jp_passive": "イマジネーションパワー: バトル中一度だけ、致命的なダメージを低確率で回避する。",
+  "ui_color": "White"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "PC-MT-SP1",
+  "name": "Cure Mofurun",
+  "jp_name": "キュアモフルン",
+  "type": "Normal",
+  "rarity": "Common",
+  "hp": 600,
+  "mp": 120,
+  "atk": 70,
+  "def": 70,
+  "agl": 40,
+  "en_passive": "Teddy Bear Charm: Boosts an adjacent ally's defense by 10%.",
+  "jp_passive": "テディベアチャーム: 隣接する味方の防御力を10%上昇させる。",
+  "ui_color": "White"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "PC-ST-004",
+  "name": "Cure Soleil",
+  "jp_name": "キュアソレイユ",
+  "type": "Fire",
+  "rarity": "Common",
+  "hp": 700,
+  "mp": 130,
+  "atk": 90,
+  "def": 80,
+  "agl": 45,
+  "en_passive": "Sunlight Strength: Deals 1.2x damage during daytime battles.",
+  "jp_passive": "サンライトストレングス: 昼間のバトル中に与えるダメージが1.2倍になる。",
+  "ui_color": "Red"
+}

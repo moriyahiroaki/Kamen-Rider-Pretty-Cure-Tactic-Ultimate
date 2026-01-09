@@ -1,0 +1,15 @@
+{
+  "id": "KR-K-M-002",
+  "name": "Kamen Rider Hercus",
+  "jp_name": "仮面ライダーヘラクス",
+  "type": "Fighting",
+  "rarity": "Common",
+  "hp": 750,
+  "mp": 150,
+  "atk": 100,
+  "def": 90,
+  "agl": 80,
+  "en_passive": "Rider Beat: Deals bonus damage to Dark-type enemies.",
+  "jp_passive": "ライダービート: あくタイプの敵に追加ダメージを与える。",
+  "ui_color": "Orange"
+}

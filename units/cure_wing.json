@@ -1,0 +1,15 @@
+{
+  "id": "PC-HS-003",
+  "name": "Cure Wing",
+  "jp_name": "キュアウィング",
+  "type": "Flying",
+  "rarity": "Common",
+  "hp": 500,
+  "mp": 160,
+  "atk": 90,
+  "def": 60,
+  "agl": 110,
+  "en_passive": "Speed of Wind: High chance to evade ground-based attacks.",
+  "jp_passive": "スピードオブウィンド: 地面系の攻撃を高確率で回避する。",
+  "ui_color": "Teal"
+}

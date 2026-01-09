@@ -1,0 +1,15 @@
+{
+  "id": "KR-EX-001",
+  "name": "Kamen Rider Ex-Aid",
+  "jp_name": "仮面ライダーエグゼイド",
+  "type": "Electric",
+  "rarity": "Common",
+  "hp": 650,
+  "mp": 140,
+  "atk": 90,
+  "def": 70,
+  "agl": 75,
+  "en_passive": "Gashat Power: Can use 2 accessories at Common rarity instead of 1.",
+  "jp_passive": "ガシャットパワー: コモンレアリティ時、アクセサリーを2つ装備できる。",
+  "ui_color": "Yellow"
+}

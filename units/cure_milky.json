@@ -1,0 +1,15 @@
+{
+  "id": "PC-ST-002",
+  "name": "Cure Milky",
+  "jp_name": "キュアミルキー",
+  "type": "Electric",
+  "rarity": "Common",
+  "hp": 450,
+  "mp": 180,
+  "atk": 65,
+  "def": 55,
+  "agl": 90,
+  "en_passive": "Milky Shock: Special attacks have a chance to paralyze the enemy for 1 turn.",
+  "jp_passive": "ミルキーショック: 特殊攻撃時、敵を1ターン麻痺させる確率がある。",
+  "ui_color": "Yellow"
+}

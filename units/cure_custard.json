@@ -1,0 +1,15 @@
+{
+  "id": "PC-KA-002",
+  "name": "Cure Custard",
+  "jp_name": "キュアカスタード",
+  "type": "Electric",
+  "rarity": "Common",
+  "hp": 500,
+  "mp": 180,
+  "atk": 75,
+  "def": 60,
+  "agl": 100,
+  "en_passive": "Squirrel Spin: Grants +1 AGL to all allies when she takes damage.",
+  "jp_passive": "スクイレルスピン: ダメージを受けるたびに全ての味方のAGLを1上昇させる。",
+  "ui_color": "Yellow"
+}

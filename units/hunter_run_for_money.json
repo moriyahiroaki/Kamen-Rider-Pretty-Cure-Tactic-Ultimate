@@ -1,0 +1,15 @@
+{
+  "id": "EXT-RM-001",
+  "name": "Hunter (Run for Money)",
+  "jp_name": "ハンター (逃走中)",
+  "type": "Steel",
+  "rarity": "Common",
+  "hp": 700,
+  "mp": 0,
+  "atk": 50,
+  "def": 120,
+  "agl": 130,
+  "en_passive": "Instant Capture: Ignores evasion passive abilities and has a chance to instantly defeat targets with less than 10% HP.",
+  "jp_passive": "インスタントキャプチャー: 回避系パッシブアビリティを無視し、HPが10%未満のターゲットを即座に撃破する確率がある。",
+  "ui_color": "Gray"
+}

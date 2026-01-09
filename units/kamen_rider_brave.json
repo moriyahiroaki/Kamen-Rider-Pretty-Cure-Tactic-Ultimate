@@ -1,0 +1,15 @@
+{
+  "id": "KR-EX-002",
+  "name": "Kamen Rider Brave",
+  "jp_name": "仮面ライダーブレイブ",
+  "type": "Ice",
+  "rarity": "Common",
+  "hp": 700,
+  "mp": 130,
+  "atk": 85,
+  "def": 90,
+  "agl": 60,
+  "en_passive": "Taddle Quest: Defense increases by 10% when HP is above 70%.",
+  "jp_passive": "タドルクエスト: HPが70%以上の場合、防御力が10%増加する。",
+  "ui_color": "Light Blue"
+}

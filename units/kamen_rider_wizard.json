@@ -1,0 +1,15 @@
+{
+  "id": "KR-W-001",
+  "name": "Kamen Rider Wizard",
+  "jp_name": "仮面ライダーウィザード",
+  "type": "Fire",
+  "rarity": "Common",
+  "hp": 600,
+  "mp": 220,
+  "atk": 85,
+  "def": 65,
+  "agl": 70,
+  "en_passive": "Elemental Ring: Gains +5 MP recovery per turn.",
+  "jp_passive": "エレメンタルリング: 毎ターンMP回復量が5増加する。",
+  "ui_color": "Red"
+}

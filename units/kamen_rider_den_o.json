@@ -1,0 +1,15 @@
+{
+  "id": "KR-D-O-001",
+  "name": "Kamen Rider Den-O",
+  "jp_name": "仮面ライダー電王",
+  "type": "Fighting",
+  "rarity": "Common",
+  "hp": 650,
+  "mp": 130,
+  "atk": 90,
+  "def": 70,
+  "agl": 70,
+  "en_passive": "Possession: Chance to evade an attack and counter-attack in the same turn.",
+  "jp_passive": "憑依: 攻撃を回避し、同ターン中に反撃する確率がある。",
+  "ui_color": "Orange"
+}

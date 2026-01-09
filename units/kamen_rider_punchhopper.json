@@ -1,0 +1,15 @@
+{
+  "id": "KR-K-007",
+  "name": "Kamen Rider PunchHopper",
+  "jp_name": "仮面ライダーパンチホッパー",
+  "type": "Fighting",
+  "rarity": "Common",
+  "hp": 700,
+  "mp": 110,
+  "atk": 100,
+  "def": 80,
+  "agl": 80,
+  "en_passive": "Rider Punch: Deals bonus damage if adjacent to a Hopping Rider ally.",
+  "jp_passive": "ライダーパンチ: 隣接するホッパー系ライダーがいる場合、追加ダメージを与える。",
+  "ui_color": "Orange"
+}

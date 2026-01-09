@@ -1,0 +1,15 @@
+{
+  "id": "PC-HS-004",
+  "name": "Cure Butterfly",
+  "jp_name": "キュアバタフライ",
+  "type": "Bug",
+  "rarity": "Common",
+  "hp": 650,
+  "mp": 150,
+  "atk": 85,
+  "def": 85,
+  "agl": 50,
+  "en_passive": "Ageha Power: Status effects applied by this unit last 1 extra turn.",
+  "jp_passive": "アゲハパワー: このユニットが与える状態異常の持続ターンが1ターン延長される。",
+  "ui_color": "Lime"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "KR-EX-008",
+  "name": "Kamen Rider Cronus",
+  "jp_name": "仮面ライダークロノス",
+  "type": "Poison",
+  "rarity": "Common",
+  "hp": 800, "mp": 150, "atk": 110, "def": 110, "agl": 90,
+  "en_passive": "Pause: Guarantees user attacks first and cancels enemy passive abilities for one turn.",
+  "jp_passive": "ポーズ: 攻撃が必ず先制攻撃になり、敵のパッシブアビリティを1ターン無効化する。",
+  "ui_color": "Violet"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "PC-KA-001",
+  "name": "Cure Whip",
+  "jp_name": "キュアホイップ",
+  "type": "Normal",
+  "rarity": "Common",
+  "hp": 600,
+  "mp": 150,
+  "atk": 85,
+  "def": 65,
+  "agl": 80,
+  "en_passive": "Rabbit Jump: Has a chance to attack twice in a single turn.",
+  "jp_passive": "ラビットジャンプ: ターン中に二回攻撃する確率がある。",
+  "ui_color": "White"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "KR-K-004",
+  "name": "Kamen Rider Drake",
+  "jp_name": "仮面ライダー・ドレイク",
+  "type": "Flying",
+  "rarity": "Common",
+  "hp": 580,
+  "mp": 160,
+  "atk": 85,
+  "def": 60,
+  "agl": 110,
+  "en_passive": "Drake Zecter: Immune to all Ground-type attacks.",
+  "jp_passive": "ドレイクゼクター: じめんタイプの攻撃を全て無効化する。",
+  "ui_color": "Teal"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "KR-D-GD-001",
+  "name": "Kamen Rider Gold Drive",
+  "jp_name": "仮面ライダーゴルドドライブ",
+  "type": "Dark",
+  "rarity": "Common",
+  "hp": 750,
+  "mp": 160,
+  "atk": 110,
+  "def": 90,
+  "agl": 80,
+  "en_passive": "Gold Conversion: On attack, small chance to disable an enemy's equipped accessory for 1 turn.",
+  "jp_passive": "Gold Conversion: 攻撃時、低確率で敵が装備しているアクセサリーを1ターン無効化する。",
+  "ui_color": "Black"
+}

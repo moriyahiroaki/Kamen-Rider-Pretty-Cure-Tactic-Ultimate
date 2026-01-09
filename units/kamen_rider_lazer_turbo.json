@@ -1,0 +1,15 @@
+{
+  "id": "KR-EX-009",
+  "name": "Kamen Rider Lazer Turbo",
+  "jp_name": "仮面ライダーレーザーターボ",
+  "type": "Dark",
+  "rarity": "Common",
+  "hp": 700,
+  "mp": 150,
+  "atk": 90,
+  "def": 80,
+  "agl": 100,
+  "en_passive": "Drago Knight Hunter Z: Team members deal 1.2x damage to Dragon-type enemies.",
+  "jp_passive": "ドラゴナイトハンターZ: チームメンバーがドラゴンタイプに与えるダメージが1.2倍になる。",
+  "ui_color": "Black"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "PC-ST-003",
+  "name": "Cure Selene",
+  "jp_name": "キュアセレーネ",
+  "type": "Psychic",
+  "rarity": "Common",
+  "hp": 520,
+  "mp": 160,
+  "atk": 85,
+  "def": 60,
+  "agl": 80,
+  "en_passive": "Moonlight Archer: Attacks from the back row deal 1.5x damage.",
+  "jp_passive": "ムーンライトアーチャー: 後列からの攻撃ダメージが1.5倍になる。",
+  "ui_color": "Coral"
+}

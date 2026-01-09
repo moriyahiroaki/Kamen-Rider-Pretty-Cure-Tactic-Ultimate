@@ -1,0 +1,15 @@
+{
+  "id": "PC-KA-005",
+  "name": "Cure Chocolat",
+  "jp_name": "キュアショコラ",
+  "type": "Fighting",
+  "rarity": "Common",
+  "hp": 720,
+  "mp": 110,
+  "atk": 105,
+  "def": 80,
+  "agl": 50,
+  "en_passive": "Dog Loyalty: If an adjacent ally's HP drops below 20%, gain 1.5x ATK.",
+  "jp_passive": "ドッグロイヤルティ: 隣接する味方のHPが20%以下になると、ATKが1.5倍になる。",
+  "ui_color": "Orange"
+}

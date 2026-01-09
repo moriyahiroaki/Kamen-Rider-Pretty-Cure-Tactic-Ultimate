@@ -1,0 +1,15 @@
+{
+  "id": "PC-KA-006",
+  "name": "Cure Parfait",
+  "jp_name": "キュアパルフェ",
+  "type": "Flying",
+  "rarity": "Common",
+  "hp": 550,
+  "mp": 200,
+  "atk": 90,
+  "def": 60,
+  "agl": 90,
+  "en_passive": "Rainbow Imagination: Status effects applied by this unit are 2x as likely to hit.",
+  "jp_passive": "レインボーイマジネーション: このユニットが与える状態異常の成功率が2倍になる。",
+  "ui_color": "Teal"
+}

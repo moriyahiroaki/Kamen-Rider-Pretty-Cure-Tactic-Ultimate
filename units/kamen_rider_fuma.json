@@ -1,0 +1,11 @@
+{
+  "id": "KR-EX-M-001",
+  "name": "Kamen Rider Fuma",
+  "jp_name": "仮面ライダー風魔",
+  "type": "Flying",
+  "rarity": "Common",
+  "hp": 650, "mp": 160, "atk": 95, "def": 70, "agl": 100,
+  "en_passive": "Ninja Player: 50% chance to summon a copy unit for 1 turn after evading an attack.",
+  "jp_passive": "ニンジャプレイヤー: 攻撃を回避した後、50%の確率でコピーユニットを1ターン召喚する。",
+  "ui_color": "Teal"
+}

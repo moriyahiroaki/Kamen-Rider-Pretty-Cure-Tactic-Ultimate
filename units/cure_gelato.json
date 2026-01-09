@@ -1,0 +1,15 @@
+{
+  "id": "PC-KA-003",
+  "name": "Cure Gelato",
+  "jp_name": "キュアジェラート",
+  "type": "Ice",
+  "rarity": "Common",
+  "hp": 750,
+  "mp": 120,
+  "atk": 80,
+  "def": 90,
+  "agl": 30,
+  "en_passive": "Lion Roar: Has a chance to 'Freeze' the enemy for 1 turn upon attack.",
+  "jp_passive": "ライオンロア: 攻撃時、敵を1ターン「凍結」させる確率がある。",
+  "ui_color": "Light Blue"
+}

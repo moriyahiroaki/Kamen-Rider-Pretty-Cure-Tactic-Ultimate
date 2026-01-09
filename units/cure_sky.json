@@ -1,0 +1,15 @@
+{
+  "id": "PC-HS-001",
+  "name": "Cure Sky",
+  "jp_name": "キュアスカイ",
+  "type": "Fighting",
+  "rarity": "Common",
+  "hp": 700,
+  "mp": 100,
+  "atk": 100,
+  "def": 80,
+  "agl": 60,
+  "en_passive": "Hero Girl: Agility increases by 10 points after every successful attack.",
+  "jp_passive": "ヒーローガール: 攻撃が成功するたびに俊敏性が10ポイント上昇する。",
+  "ui_color": "Orange"
+}

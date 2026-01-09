@@ -1,0 +1,15 @@
+{
+  "id": "KR-EX-007",
+  "name": "Kamen Rider Poppy",
+  "jp_name": "仮面ライダーポッピー",
+  "type": "Fairy",
+  "rarity": "Common",
+  "hp": 600,
+  "mp": 200,
+  "atk": 70,
+  "def": 70,
+  "agl": 90,
+  "en_passive": "Gashun Sound: Heals 10% HP for all allies when her MP is full.",
+  "jp_passive": "ガシュンサウンド: MPが満タンになると、味方全員のHPを10%回復する。",
+  "ui_color": "Pink"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "KR-K-M-001",
+  "name": "Kamen Rider Caucasus",
+  "jp_name": "仮面ライダーコーカサス",
+  "type": "Steel",
+  "rarity": "Common",
+  "hp": 800, "mp": 150, "atk": 115, "def": 100, "agl": 90,
+  "en_passive": "Golden Zecter: Immune to all Poison-type attacks.",
+  "jp_passive": "ゴールデンゼクター: どくタイプの攻撃を全て無効化する。",
+  "ui_color": "Gray"
+}

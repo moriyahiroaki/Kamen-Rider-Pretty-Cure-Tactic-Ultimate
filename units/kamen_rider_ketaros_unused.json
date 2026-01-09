@@ -1,0 +1,15 @@
+{
+  "id": "KR-K-M-003",
+  "name": "Kamen Rider Ketaros",
+  "jp_name": "仮面ライダーケタロス",
+  "type": "Fighting",
+  "rarity": "Common",
+  "hp": 730,
+  "mp": 140,
+  "atk": 105,
+  "def": 85,
+  "agl": 85,
+  "en_passive": "Rider Slash: If HP is above 80%, deals bonus damage with sword attacks.",
+  "jp_passive": "ライダースラッシュ: HPが80%以上の場合、剣攻撃で追加ダメージを与える。",
+  "ui_color": "Orange"
+}

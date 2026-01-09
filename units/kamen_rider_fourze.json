@@ -1,0 +1,15 @@
+{
+  "id": "KR-F-001",
+  "name": "Kamen Rider Fourze",
+  "jp_name": "仮面ライダーフォーゼ",
+  "type": "Normal",
+  "rarity": "Common",
+  "hp": 700,
+  "mp": 100,
+  "atk": 80,
+  "def": 80,
+  "agl": 50,
+  "en_passive": "Astro Switches: Equipped accessories have their stat bonuses increased by 20%.",
+  "jp_passive": "アストロスイッチ: 装備しているアクセサリーのステータスボーナスが20%増加する。",
+  "ui_color": "White"
+}

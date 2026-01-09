@@ -1,0 +1,15 @@
+{
+  "id": "PC-HS-002",
+  "name": "Cure Prism",
+  "jp_name": "キュアプリズム",
+  "type": "Fairy",
+  "rarity": "Common",
+  "hp": 550,
+  "mp": 180,
+  "atk": 70,
+  "def": 80,
+  "agl": 75,
+  "en_passive": "White Prism: Boosts defense of adjacent allies by 15%.",
+  "jp_passive": "ホワイトプリズム: 隣接する味方の防御力を15%上昇させる。",
+  "ui_color": "Pink"
+}

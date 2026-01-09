@@ -1,0 +1,15 @@
+{
+  "id": "KR-EX-004",
+  "name": "Kamen Rider Lazer",
+  "jp_name": "仮面ライダーレーザー",
+  "type": "Dark",
+  "rarity": "Common",
+  "hp": 500,
+  "mp": 180,
+  "atk": 80,
+  "def": 50,
+  "agl": 130,
+  "en_passive": "Giri Giri Chambara: Guaranteed to evade the first attack each turn.",
+  "jp_passive": "ギリギリチャンバラ: 各ターンの最初の攻撃を必ず回避する。",
+  "ui_color": "Black"
+}

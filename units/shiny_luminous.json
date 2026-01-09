@@ -1,0 +1,15 @@
+{
+  "id": "PC-MH-003",
+  "name": "Shiny Luminous",
+  "jp_name": "シャイニールミナス",
+  "type": "Fairy",
+  "rarity": "Common",
+  "hp": 600,
+  "mp": 220,
+  "atk": 50,
+  "def": 70,
+  "agl": 55,
+  "en_passive": "Life & Heart: Heals the lowest HP ally by 10% at the end of each turn.",
+  "jp_passive": "ライフ＆ハート: 毎ターン終了時、最もHPが低い味方をHPの10%回復する。",
+  "ui_color": "Pink"
+}

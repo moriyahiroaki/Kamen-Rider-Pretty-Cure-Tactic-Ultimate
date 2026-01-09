@@ -1,0 +1,15 @@
+{
+  "id": "KR-EX-008",
+  "name": "Kamen Rider Cronus",
+  "jp_name": "仮面ライダークロノス",
+  "type": "Poison",
+  "rarity": "Common",
+  "hp": 800,
+  "mp": 180,
+  "atk": 110,
+  "def": 100,
+  "agl": 100,
+  "en_passive": "Pausing Time: Can prevent the enemy team from taking action for 1 turn (High MP cost).",
+  "jp_passive": "時を止める: 高いMPコストで敵チームの行動を1ターン封じる。",
+  "ui_color": "Violet"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "PC-HS-005",
+  "name": "Cure Majesty",
+  "jp_name": "キュアマジェスティ",
+  "type": "Psychic",
+  "rarity": "Common",
+  "hp": 720,
+  "mp": 180,
+  "atk": 90,
+  "def": 90,
+  "agl": 40,
+  "en_passive": "Majestic Aura: Boosts all allies' defense by 5%.",
+  "jp_passive": "マジェスティックオーラ: 全ての味方ユニットの防御力を5%上昇させる。",
+  "ui_color": "Coral"
+}

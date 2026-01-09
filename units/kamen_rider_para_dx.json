@@ -1,0 +1,15 @@
+{
+  "id": "KR-EX-006",
+  "name": "Kamen Rider Para-DX",
+  "jp_name": "仮面ライダーパラドクス",
+  "type": "Fighting",
+  "rarity": "Common",
+  "hp": 700,
+  "mp": 180,
+  "atk": 110,
+  "def": 80,
+  "agl": 90,
+  "en_passive": "Perfect Puzzle: Gains MP every time a type matchup advantage is exploited.",
+  "jp_passive": "パーフェクトパズル: タイプ相性の有利を突くたびにMPを獲得する。",
+  "ui_color": "Orange"
+}

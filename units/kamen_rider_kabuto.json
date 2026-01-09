@@ -1,0 +1,15 @@
+{
+  "id": "KR-K-001",
+  "name": "Kamen Rider Kabuto",
+  "jp_name": "仮面ライダーカブト",
+  "type": "Bug",
+  "rarity": "Common",
+  "hp": 650,
+  "mp": 150,
+  "atk": 100,
+  "def": 70,
+  "agl": 120,
+  "en_passive": "Clock Up: Guaranteed to attack first in the turn order.",
+  "jp_passive": "クロックアップ: ターン順序で必ず最初に攻撃する。",
+  "ui_color": "Lime"
+}

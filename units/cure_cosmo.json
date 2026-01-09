@@ -1,0 +1,15 @@
+{
+  "id": "PC-ST-005",
+  "name": "Cure Cosmo",
+  "jp_name": "キュアコスモ",
+  "type": "Fairy",
+  "rarity": "Common",
+  "hp": 550,
+  "mp": 180,
+  "atk": 85,
+  "def": 65,
+  "agl": 95,
+  "en_passive": "Cosmic Mirage: High chance to evade the first attack each turn.",
+  "jp_passive": "コズミックミラージュ: 各ターン最初の攻撃を回避する確率が高い。",
+  "ui_color": "Pink"
+}

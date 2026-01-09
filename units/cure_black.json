@@ -1,0 +1,15 @@
+{
+  "id": "PC-MH-001",
+  "name": "Cure Black",
+  "jp_name": "キュアブラック",
+  "type": "Fighting",
+  "rarity": "Common",
+  "hp": 700,
+  "mp": 100,
+  "atk": 110,
+  "def": 80,
+  "agl": 60,
+  "en_passive": "Black & White Synergy: If an ally Cure White is on the field, ATK and DEF increase by 15%.",
+  "jp_passive": "ブラック＆ホワイトシナジー: 味方にキュアホワイトが存在する場合、ATKとDEFが15%上昇する。",
+  "ui_color": "Orange"
+}

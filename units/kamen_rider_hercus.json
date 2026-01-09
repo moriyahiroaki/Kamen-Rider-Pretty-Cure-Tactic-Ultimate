@@ -1,0 +1,11 @@
+{
+  "id": "KR-K-M-002",
+  "name": "Kamen Rider Hercus",
+  "jp_name": "仮面ライダーヘラクス",
+  "type": "Bug",
+  "rarity": "Common",
+  "hp": 750, "mp": 130, "atk": 100, "def": 90, "agl": 80,
+  "en_passive": "Hercus Zecter: Takes 10% less damage from Fighting-type attacks.",
+  "jp_passive": "ヘラクスゼクター: かくとうタイプの攻撃から受けるダメージを10%軽減する。",
+  "ui_color": "Lime"
+}

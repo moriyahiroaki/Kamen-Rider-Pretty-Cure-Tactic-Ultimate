@@ -1,0 +1,15 @@
+{
+  "id": "KR-K-003",
+  "name": "Kamen Rider TheBee",
+  "jp_name": "仮面ライダーザビー",
+  "type": "Bug",
+  "rarity": "Common",
+  "hp": 600,
+  "mp": 140,
+  "atk": 95,
+  "def": 65,
+  "agl": 90,
+  "en_passive": "Perfect Harmony: Buffs adjacent allies' AGL by 5 points.",
+  "jp_passive": "パーフェクトハーモニー: 隣接する味方のAGLを5ポイント上昇させる。",
+  "ui_color": "Lime"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "KR-EX-003",
+  "name": "Kamen Rider Snipe",
+  "jp_name": "仮面ライダースナイプ",
+  "type": "Ground",
+  "rarity": "Common",
+  "hp": 600,
+  "mp": 120,
+  "atk": 115,
+  "def": 60,
+  "agl": 70,
+  "en_passive": "Bang Bang Shooting: Ranged attacks deal 1.5x damage.",
+  "jp_passive": "バンバンシューティング: 遠隔攻撃のダメージが1.5倍になる。",
+  "ui_color": "Brown"
+}

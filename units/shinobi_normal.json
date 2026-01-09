@@ -1,0 +1,15 @@
+{
+  "id": "EXT-RM-002",
+  "name": "Shinobi",
+  "jp_name": "シノビ (戦闘中)",
+  "type": "Normal",
+  "rarity": "Common",
+  "hp": 650,
+  "mp": 100,
+  "atk": 80,
+  "def": 70,
+  "agl": 90,
+  "en_passive": "Stealth Movement: Has a chance to evade the first attack in a battle.",
+  "jp_passive": "ステルス移動: バトル中の最初の攻撃を回避する確率がある。",
+  "ui_color": "White"
+}

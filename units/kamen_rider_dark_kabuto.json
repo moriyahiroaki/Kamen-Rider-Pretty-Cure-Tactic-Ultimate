@@ -1,0 +1,15 @@
+{
+  "id": "KR-K-008",
+  "name": "Kamen Rider Dark Kabuto",
+  "jp_name": "仮面ライダーダークカブト",
+  "type": "Dark",
+  "rarity": "Common",
+  "hp": 630,
+  "mp": 160,
+  "atk": 110,
+  "def": 70,
+  "agl": 125,
+  "en_passive": "Dark Clock Up: Guaranteed to attack first, but takes 5% recoil damage.",
+  "jp_passive": "ダーククロックアップ: 必ず最初に攻撃するが、5%の反動ダメージを受ける。",
+  "ui_color": "Black"
+}
