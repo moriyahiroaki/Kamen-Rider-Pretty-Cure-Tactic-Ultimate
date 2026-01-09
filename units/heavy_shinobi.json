@@ -1,0 +1,15 @@
+{
+  "id": "EXT-RM-006",
+  "name": "Heavy Shinobi",
+  "jp_name": "ジュウソウ・シノビ",
+  "type": "Steel",
+  "rarity": "Common",
+  "hp": 900,
+  "mp": 50,
+  "atk": 90,
+  "def": 140,
+  "agl": 10,
+  "en_passive": "Iron Wall: Takes 20% less damage from all Fighting-type attacks.",
+  "jp_passive": "鉄壁: かくとうタイプの攻撃から受けるダメージを20%軽減する。",
+  "ui_color": "Gray"
+}
