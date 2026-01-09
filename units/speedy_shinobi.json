@@ -1,0 +1,15 @@
+{
+  "id": "EXT-RM-004",
+  "name": "Speedy Shinobi",
+  "jp_name": "ソクリョク・シノビ",
+  "type": "Flying",
+  "rarity": "Common",
+  "hp": 600,
+  "mp": 100,
+  "atk": 75,
+  "def": 60,
+  "agl": 140,
+  "en_passive": "Wind Step: Immune to Ground-type attacks and has a high chance to evade the first attack each turn.",
+  "jp_passive": "風の歩法: じめんタイプの攻撃を無効化し、毎ターン最初の攻撃を高確率で回避する。",
+  "ui_color": "Teal"
+}
