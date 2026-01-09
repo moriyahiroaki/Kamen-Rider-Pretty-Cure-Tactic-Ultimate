@@ -52,13 +52,14 @@
     <div class="controls">
     <h3>Command Center</h3>
     <p>Credits: <span id="credit-count">0</span> | Mode: <span id="difficulty-text">Normal</span></p>
-
+    
     <!-- Language Switcher Button -->
     <button onclick="game.toggleLanguage()">**Switch Language (EN/JP)**</button>
-    
-    <!-- Add buttons for your new units -->
-    <button onclick="game.recruitUnitFromFile('kamen_rider_zeztz.json')">**Recruit Zeztz (Steel)**</button>
-    <button onclick="game.recruitUnitFromFile('cure_mystery.json')">**Recruit Mystery (Psychic)**</button>
+
+    <!-- Futari wa Pretty Cure Max Heart (2005) -->
+    <button onclick="game.recruitUnitFromFile('cure_black.json')">Recruit Cure Black (Fighting)</button>
+    <button onclick="game.recruitUnitFromFile('cure_white.json')">Recruit Cure White (Fighting)</button>
+    <button onclick="game.recruitUnitFromFile('shiny_luminous.json')">Recruit Shiny Luminous (Fairy)</button>
 
     <!-- Kamen Rider Kabuto (2006) -->
     <button onclick="game.recruitUnitFromFile('kamen_rider_kabuto.json')">Recruit Kabuto (Bug)</button>
@@ -66,37 +67,88 @@
     <button onclick="game.recruitUnitFromFile('kamen_rider_thebee.json')">Recruit TheBee (Bug)</button>
     <button onclick="game.recruitUnitFromFile('kamen_rider_drake.json')">Recruit Drake (Flying)</button>
     <button onclick="game.recruitUnitFromFile('kamen_rider_sasword.json')">Recruit Sasword (Dragon)</button>
+    <button onclick="game.recruitUnitFromFile('kamen_rider_kickhopper.json')">Recruit KickHopper (Fighting)</button>
+    <button onclick="game.recruitUnitFromFile('kamen_rider_punchhopper.json')">Recruit PunchHopper (Fighting)</button>
+    <button onclick="game.recruitUnitFromFile('kamen_rider_dark_kabuto.json')">Recruit Dark Kabuto (Dark)</button>
+    <!-- GSL Movie Riders -->
     <button onclick="game.recruitUnitFromFile('kamen_rider_caucasus.json')">Recruit Caucasus (Steel)</button>
     <button onclick="game.recruitUnitFromFile('kamen_rider_hercus.json')">Recruit Hercus (Bug)</button>
     <button onclick="game.recruitUnitFromFile('kamen_rider_ketaros.json')">Recruit Ketaros (Bug)</button>
-    
+
+
+    <!-- Kamen Rider Den-O (2007) -->
     <button onclick="game.recruitUnitFromFile('kamen_rider_den_o.json')">Recruit Den-O (Fighting)</button>
+
+    <!-- Heartcatch Pretty Cure! (2010) -->
+    <button onclick="game.recruitUnitFromFile('cure_blossom.json')">Recruit Cure Blossom (Fairy)</button>
+    <button onclick="game.recruitUnitFromFile('cure_marine.json')">Recruit Cure Marine (Water)</button>
+    <button onclick="game.recruitUnitFromFile('cure_sunshine.json')">Recruit Cure Sunshine (Grass)</button>
+    <button onclick="game.recruitUnitFromFile('cure_moonlight.json')">Recruit Cure Moonlight (Psychic)</button>
+
+    <!-- Kamen Rider Fourze (2011) -->
     <button onclick="game.recruitUnitFromFile('kamen_rider_fourze.json')">Recruit Fourze (Normal)</button>
+
+    <!-- Kamen Rider Wizard (2012) -->
     <button onclick="game.recruitUnitFromFile('kamen_rider_wizard.json')">Recruit Wizard (Fire)</button>
+
+    <!-- Mahou Tsukai Pretty Cure! (2016) -->
+    <button onclick="game.recruitUnitFromFile('cure_miracle.json')">Recruit Cure Miracle (Fairy)</button>
+    <button onclick="game.recruitUnitFromFile('cure_magical.json')">Recruit Cure Magical (Ghost)</button>
+    <button onclick="game.recruitUnitFromFile('cure_felice.json')">Recruit Cure Felice (Grass)</button>
+    <button onclick="game.recruitUnitFromFile('cure_mofurun.json')">Recruit Cure Mofurun (Normal)</button>
+
+    <!-- Kirakira Pretty Cure a la Mode! (2017) -->
+    <button onclick="game.recruitUnitFromFile('cure_whip.json')">Recruit Cure Whip (Normal)</button>
+    <button onclick="game.recruitUnitFromFile('cure_custard.json')">Recruit Cure Custard (Electric)</button>
+    <button onclick="game.recruitUnitFromFile('cure_gelato.json')">Recruit Cure Gelato (Ice)</button>
+    <button onclick="game.recruitUnitFromFile('cure_macaron.json')">Recruit Cure Macaron (Steel)</button>
+    <button onclick="game.recruitUnitFromFile('cure_chocolat.json')">Recruit Cure Chocolat (Fighting)</button>
+    <button onclick="game.recruitUnitFromFile('cure_parfait.json')">Recruit Cure Parfait (Flying)</button>
+
+    <!-- Kamen Rider Ex-Aid (2016/2017) -->
     <button onclick="game.recruitUnitFromFile('kamen_rider_ex_aid.json')">Recruit Ex-Aid (Electric)</button>
     <button onclick="game.recruitUnitFromFile('kamen_rider_brave.json')">Recruit Brave (Ice)</button>
     <button onclick="game.recruitUnitFromFile('kamen_rider_snipe.json')">Recruit Snipe (Ground)</button>
     <button onclick="game.recruitUnitFromFile('kamen_rider_lazer.json')">Recruit Lazer (Dark)</button>
     <button onclick="game.recruitUnitFromFile('kamen_rider_genm.json')">Recruit Genm (Poison)</button>
     <button onclick="game.recruitUnitFromFile('kamen_rider_para_dx.json')">Recruit Para-DX (Fighting)</button>
-    <button onclick="game.recruitUnitFromFile('kamen_rider_saber.json')">Recruit Saber (Fire)</button>
-    <button onclick="game.recruitUnitFromFile('kamen_rider_gold_drive.json')">**Recruit Gold Drive (Dark)**</button>
-    <button onclick="game.recruitUnitFromFile('cure_star.json')">**Recruit Cure Star (Normal)**</button>
-    <button onclick="game.recruitUnitFromFile('cure_milky.json')">**Recruit Cure Milky (Electric)**</button>
-    <button onclick="game.recruitUnitFromFile('cure_soleil.json')">**Recruit Cure Soleil (Fire)**</button>
-    <button onclick="game.recruitUnitFromFile('cure_selene.json')">**Recruit Cure Selene (Psychic)**</button>
-    <button onclick="game.recruitUnitFromFile('cure_cosmo.json')">**Recruit Cure Cosmo (Fairy)**</button>
+    <button onclick="game.recruitUnitFromFile('kamen_rider_poppy.json')">Recruit Poppy (Fairy)</button>
+    <button onclick="game.recruitUnitFromFile('kamen_rider_cronus.json')">Recruit Cronus (Poison)</button>
+    <button onclick="game.recruitUnitFromFile('kamen_rider_fuma.json')">Recruit Fuma (Flying)</button>
+    <button onclick="game.recruitUnitFromFile('kamen_rider_lazer_turbo.json')">Recruit Lazer Turbo (Dark)</button>
+    
+    <!-- Star Twinkle Pretty Cure (2019) -->
+    <button onclick="game.recruitUnitFromFile('cure_star.json')">Recruit Cure Star (Normal)</button>
+    <button onclick="game.recruitUnitFromFile('cure_milky.json')">Recruit Cure Milky (Electric)</button>
+    <button onclick="game.recruitUnitFromFile('cure_soleil.json')">Recruit Cure Soleil (Fire)</button>
+    <button onclick="game.recruitUnitFromFile('cure_selene.json')">Recruit Cure Selene (Psychic)</button>
+    <button onclick="game.recruitUnitFromFile('cure_cosmo.json')">Recruit Cure Cosmo (Fairy)</button>
 
-    <!-- Run for Money Secret Unit -->
-    <button id="btn-hunter" onclick="game.recruitUnitFromFile('hunter_run_for_money.json')">Recruit Hunter</button>
-　<button id="btn-shinobi" onclick="game.recruitUnitFromFile('shinobi_normal.json')">Recruit Shinobi</button>
-　<button id="btn-strength-shinobi" onclick="game.recruitUnitFromFile('strength_shinobi.json')">Recruit Strength Shinobi</button>
-    
-    
+    <!-- Kamen Rider Saber (2020) -->
+    <button onclick="game.recruitUnitFromFile('kamen_rider_saber.json')">Recruit Saber (Fire)</button>
+
+    <!-- Soaring Sky! Pretty Cure (2023) -->
+    <button onclick="game.recruitUnitFromFile('cure_sky.json')">Recruit Cure Sky (Fighting)</button>
+    <button onclick="game.recruitUnitFromFile('cure_prism.json')">Recruit Cure Prism (Fairy)</button>
+    <button onclick="game.recruitUnitFromFile('cure_wing.json')">Recruit Cure Wing (Flying)</button>
+    <button onclick="game.recruitUnitFromFile('cure_butterfly.json')">Recruit Cure Butterfly (Bug)</button>
+    <button onclick="game.recruitUnitFromFile('cure_majesty.json')">Recruit Cure Majesty (Psychic)</button>
+
+
+    <!-- Battle for Money Shinobi Secret Units (Requires Unlock) -->
+    <!-- You MUST add the IDs (btn-hunter, etc) to enable the lock logic in game.js! -->
+    <button id="btn-hunter" onclick="game.recruitUnitFromFile('hunter_run_for_money.json')">Recruit Hunter (Steel)</button>
+    <button id="btn-shinobi" onclick="game.recruitUnitFromFile('shinobi_normal.json')">Recruit Shinobi (Normal)</button>
+    <button id="btn-strength-shinobi" onclick="game.recruitUnitFromFile('strength_shinobi.json')">Recruit Strength Shinobi (Rock)</button>
+    <button id="btn-speedy-shinobi" onclick="game.recruitUnitFromFile('speedy_shinobi.json')">Recruit Speedy Shinobi (Flying)</button>
+    <button id="btn-technical-shinobi" onclick="game.recruitUnitFromFile('technical_shinobi.json')">Recruit Technical Shinobi (Psychic)</button>
+    <button id="btn-heavy-shinobi" onclick="game.recruitUnitFromFile('heavy_shinobi.json')">Recruit Heavy Shinobi (Steel)</button>
+
+
+    <!-- Standard Game Controls (Do Not Delete) -->
     <button onclick="changeDifficulty()">Change Difficulty</button>
     <button onclick="saveGame()">Save JSON</button>
     <button onclick="game.upgradeTeam()">Unlimited Stat Upgrade</button>
-    </div>
 </div>
 
 <!-- This line links the HTML to your main game logic file in the 'script' folder -->
@@ -105,3 +157,4 @@
 </body>
 
 </html>
+
