@@ -88,7 +88,10 @@
     <button onclick="game.recruitUnitFromFile('cure_cosmo.json')">**Recruit Cure Cosmo (Fairy)**</button>
 
     <!-- Run for Money Secret Unit -->
-    <button onclick="game.recruitUnitFromFile('hunter_run_for_money.json')">Recruit Hunter (Secret Unit)</button>
+    <button id="btn-hunter" onclick="game.recruitUnitFromFile('hunter_run_for_money.json')">Recruit Hunter</button>
+　<button id="btn-shinobi" onclick="game.recruitUnitFromFile('shinobi_normal.json')">Recruit Shinobi</button>
+　<button id="btn-strength-shinobi" onclick="game.recruitUnitFromFile('strength_shinobi.json')">Recruit Strength Shinobi</button>
+    
     
     <button onclick="changeDifficulty()">Change Difficulty</button>
     <button onclick="saveGame()">Save JSON</button>
@@ -100,4 +103,5 @@
 <script src="./script/game.js"></script>
 
 </body>
+
 </html>
