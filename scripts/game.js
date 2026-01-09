@@ -1,9 +1,9 @@
 const CONFIG = {
-    // ... (rest of the CONFIG object remains the same) ...
     RARITIES: ["Common", "Uncommon", "Rare", "Very Rare", "Epic", "Heroic", "Legendary", "Mythical", "Ultimate"],
     DIFFICULTIES: ["Enjoy", "Casual", "Light", "Normal", "Hyper", "Extra", "Special", "Deluxe", "Hell", "Death"],
-    TYPES: ["Normal", "Fire", "Water", "Electric", "Grass", "Ice", "Fighting", "Poison", "Ground", "Flying", "Psychic", "Bug", "Rock", "Dark", "Steel", "Fairy", "Ghost", "Dragon"], // Added Ghost/Dragon back to match chart
-    CHART: { /* ... (full 18-type chart from previous response) ... */ 
+    TYPES: ["Normal", "Fire", "Water", "Electric", "Grass", "Ice", "Fighting", "Poison", "Ground", "Flying", "Psychic", "Bug", "Rock", "Ghost", "Dragon", "Dark", "Steel", "Fairy"],
+    // The complete 18-type matchup chart
+    CHART: {
         Normal:   { Rock: 0.5, Ghost: 0, Steel: 0.5 },
         Fire:     { Fire: 0.5, Water: 0.5, Grass: 2, Ice: 2, Bug: 2, Rock: 0.5, Dragon: 0.5, Steel: 2 },
         Water:    { Fire: 2, Water: 0.5, Grass: 0.5, Ground: 2, Rock: 2, Dragon: 0.5 },
@@ -24,12 +24,13 @@ const CONFIG = {
         Fairy:    { Fire: 0.5, Fighting: 2, Poison: 0.5, Dragon: 2, Dark: 2, Steel: 0.5 }
     }
 };
-// ... (Accessory and Unit classes remain the same) ...
+
 class Accessory {
     constructor(name, type, rarity = "Common", atkBonus = 20) {
         this.name = name; this.type = type; this.rarity = rarity; this.atkBonus = atkBonus;
     }
 }
+
 class Unit {
     constructor(name, type, stats) {
         this.name = name; this.type = type; this.rarity = "Common";
@@ -39,6 +40,7 @@ class Unit {
         this.maxSlots = 1;
         this.en_passive = stats.en_passive; this.jp_passive = stats.jp_passive;
     }
+
     getDamageAgainst(target) {
         let multiplier = 1.0;
         if (this.rarity === "Ultimate") { multiplier = 2.0; } 
@@ -53,53 +55,55 @@ class Unit {
         return Math.floor(equipmentAtk * multiplier);
     }
 }
+
 class GameEngine {
     constructor() {
         this.team = [];
         this.credits = 0;
         this.diffIndex = 3;
         this.currentLanguage = 'en';
-        this.unlockedUnits = []; // New list to track unlocked unit IDs
+        this.unlockedUnits = []; // List to track unlocked unit IDs
     }
+    
     toggleLanguage() {
         this.currentLanguage = (this.currentLanguage === 'en') ? 'jp' : 'en';
-        this.updateUI();
+        this.updateUI(); 
     }
-    // NEW: Function to be called when you win a battle against the secret unit
+
     unlockSecretUnit(unitID) {
         if (!this.unlockedUnits.includes(unitID)) {
             this.unlockedUnits.push(unitID);
             alert(`You defeated the Secret Unit! ${unitID} is now available for recruitment!`);
-            // Optional: You could add 5 credits as a reward here too
             this.updateUI(); 
         }
     }
-    async recruitUnitFromFile(fileName) {
-    try {
-        const response = await fetch(`./units/${fileName}`);
-        if (!response.ok) throw new Error('Network response was not ok');
-        const unitData = await await response.json();
-        
-        // CRITICAL CHECK: Block secret units until unlocked
-        const SECRET_IDS = ["EXT-RM-001", "EXT-RM-002", "EXT-RM-003", "EXT-RM-004", "EXT-RM-005", "EXT-RM-006"];
-        if (SECRET_IDS.includes(unitData.id) && !this.unlockedUnits.includes(unitData.id)) {
-            alert("This is a Secret Unit! You must defeat them in a random encounter first!");
-            return; // Stops recruitment
-        }
 
-        if (this.team.length >= 5 && this.credits <= 0) {
-            alert("6th unit or later requires Credits!");
-            return;
+    async recruitUnitFromFile(fileName) {
+        try {
+            const response = await fetch(`./units/${fileName}`);
+            if (!response.ok) throw new Error('Network response was not ok');
+            const unitData = await response.json();
+            
+            // CRITICAL CHECK: Block secret units until unlocked
+            const SECRET_IDS = ["EXT-RM-001", "EXT-RM-002", "EXT-RM-003", "EXT-RM-004", "EXT-RM-005", "EXT-RM-006"];
+            if (SECRET_IDS.includes(unitData.id) && !this.unlockedUnits.includes(unitData.id)) {
+                 alert("This is a Secret Unit! You must defeat them in a random encounter first!");
+                 return; // Stops recruitment
+            }
+
+            if (this.team.length >= 5 && this.credits <= 0) {
+                alert("6th unit or later requires Credits!");
+                return;
+            }
+            if (this.team.length >= 5) this.credits--;
+            this.team.push(new Unit(unitData.name, unitData.type, unitData)); 
+            this.updateUI();
+        } catch (error) {
+            console.error("Failed to load unit from file:", error);
+            alert("Could not load unit file. Make sure you are running on a local server!");
         }
-        if (this.team.length >= 5) this.credits--;
-        this.team.push(new Unit(unitData.name, unitData.type, unitData)); 
-        this.updateUI();
-    } catch (error) {
-        console.error("Failed to load unit from file:", error);
-        alert("Could not load unit file. Make sure you are running on a local server!");
     }
-}
-    // ... (upgradeTeam and equipItem remain the same) ...
+
     upgradeTeam() {
         this.team.forEach(u => {
             u.hp += 200; u.atk += 50; u.def += 30; u.agl += 20; 
@@ -111,6 +115,7 @@ class GameEngine {
         });
         this.updateUI();
     }
+
     equipItem(idx) {
         const unit = this.team[idx];
         if(unit.slots.length < unit.maxSlots) {
@@ -118,6 +123,7 @@ class GameEngine {
             this.updateUI();
         } else { alert("Unlock more slots via Rarity Upgrade!"); }
     }
+
     updateUI() {
         const field = document.getElementById('battlefield');
         field.innerHTML = '';
@@ -144,21 +150,49 @@ class GameEngine {
         document.getElementById('credit-count').innerText = this.credits;
         document.getElementById('difficulty-text').innerText = CONFIG.DIFFICULTIES[this.diffIndex];
 
-        // Optional: Change the Hunter button text if it's unlocked
-        const hunterButton = document.querySelector('[onclick*="hunter_run_for_money.json"]');
-        if (hunterButton && this.unlockedUnits.includes("EXT-RM-001")) {
-            hunterButton.style.border = '3px solid gold';
-            hunterButton.innerText = 'Recruit Hunter (Unlocked)';
+        // Logic to update secret unit buttons visually
+        const secretUnits = {
+            'EXT-RM-001': 'btn-hunter', 'EXT-RM-002': 'btn-shinobi', 'EXT-RM-003': 'btn-strength-shinobi',
+            'EXT-RM-004': 'btn-speedy-shinobi', 'EXT-RM-005': 'btn-technical-shinobi', 'EXT-RM-006': 'btn-heavy-shinobi'
+        };
+
+        for (const unitId in secretUnits) {
+            const buttonId = secretUnits[unitId];
+            const button = document.getElementById(buttonId);
+            if (button) {
+                if (this.unlockedUnits.includes(unitId)) {
+                    button.disabled = false;
+                    button.style.backgroundColor = 'green';
+                    button.innerText = button.innerText.replace(' (Locked)', '').replace(' (Locked)', ''); // Clean up text
+                } else {
+                    button.disabled = true;
+                    button.style.backgroundColor = 'red';
+                    if (!button.innerText.includes('(Locked)')) {
+                        button.innerText += ' (Locked)';
+                    }
+                }
+            }
         }
     }
 }
+
 const game = new GameEngine();
-// ... (changeDifficulty and saveGame functions remain the same) ...
-function changeDifficulty() { game.diffIndex = (game.diffIndex + 1) % CONFIG.DIFFICULTIES.length; game.updateUI(); }
+// Helper function to manually test the unlock function
+function testUnlockHunter() { game.unlockSecretUnit("EXT-RM-001"); }
+function testUnlockShinobi() { game.unlockSecretUnit("EXT-RM-002"); }
+function testUnlockStrengthShinobi() { game.unlockSecretUnit("EXT-RM-003"); }
+function testUnlockSpeedyShinobi() { game.unlockSecretUnit("EXT-RM-004"); }
+function testUnlockTechnicalShinobi() { game.unlockSecretUnit("EXT-RM-005"); }
+function testUnlockHeavyShinobi() { game.unlockSecretUnit("EXT-RM-006"); }
+
+
+function changeDifficulty() {
+    game.diffIndex = (game.diffIndex + 1) % CONFIG.DIFFICULTIES.length;
+    game.updateUI();
+}
+
 function saveGame() {
     const data = JSON.stringify(game);
     const blob = new Blob([data], {type: "application/json"});
     const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = "Ultimate_Battle_2026.json"; a.click();
 }
-// Helper function to manually test the unlock function
-function testUnlockHunter() { game.unlockSecretUnit("EXT-RM-001"); }
