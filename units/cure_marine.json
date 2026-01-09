@@ -1,0 +1,15 @@
+{
+  "id": "PC-HC-002",
+  "name": "Cure Marine",
+  "jp_name": "キュアマリン",
+  "type": "Water",
+  "rarity": "Common",
+  "hp": 580,
+  "mp": 180,
+  "atk": 85,
+  "def": 65,
+  "agl": 75,
+  "en_passive": "Marine Dynamite: When defeated, deals a small amount of damage (10% of max HP) to all adjacent enemy units.",
+  "jp_passive": "マリンダイナマイト: 倒された時、隣接する全ての敵ユニットに少量のダメージを与える。",
+  "ui_color": "Blue"
+}
