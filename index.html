@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamen Rider & Pretty Cure: Ultimate Battle (2026)</title>
+    <style>
+        :root {
+            /* Type Colors */
+            --Normal: #FFFFFF; --Fire: #FF0000; --Water: #0000FF; --Electric: #FFFF00;
+            --Grass: #008000; --Fighting: #FFA500; --Ice: #ADD8E6; --Psychic: #FF7F50;
+            --Bug: #32CD32; --Ground: #8B4513; --Rock: #F5F5DC; --Poison: #EE82EE;
+            --Ghost: #800080; --Dragon: #4B0082; --Flying: #008080; --Dark: #000000;
+            --Steel: #808080; --Fairy: #FFC0CB;
+        }
+
+        body { background: #1a1a1a; color: white; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; }
+        
+        /* Card & UI Styles */
+        .game-container { display: flex; flex-direction: column; align-items: center; }
+        .grid-5v5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-bottom: 20px; }
+        
+        .card {
+            width: 160px; border-radius: 8px; padding: 10px; text-align: center;
+            border: 3px solid #ccc; color: black; position: relative;
+        }
+
+        /* Stellar Rainbow Animation */
+        .rarity-ultimate {
+            background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+            background-size: 400% 400%; animation: stellar 5s linear infinite; border: 4px solid gold; color: white;
+        }
+        @keyframes stellar { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+
+        .stat-bar { font-size: 12px; text-align: left; background: rgba(255,255,255,0.7); margin-top: 5px; padding: 2px; }
+        .slot-container { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 5px; }
+        .slot { width: 25px; height: 25px; background: rgba(0,0,0,0.2); border: 1px solid #555; font-size: 10px; }
+        
+        .controls { background: #333; padding: 15px; border-radius: 10px; margin-top: 20px; }
+        button { cursor: pointer; padding: 8px 12px; margin: 5px; }
+    </style>
+</head>
+<body>
+
+<div class="game-container">
+    <h1>仮面ライダー & プリキュア: Ultimate Battle</h1>
+    
+    <div id="battlefield" class="grid-5v5">
+        <!-- Units will appear here -->
+    </div>
+
+    <div class="controls">
+    <h3>Command Center</h3>
+    <p>Credits: <span id="credit-count">0</span> | Mode: <span id="difficulty-text">Normal</span></p>
+
+    <!-- Language Switcher Button -->
+    <button onclick="game.toggleLanguage()">**Switch Language (EN/JP)**</button>
+    
+    <!-- Add buttons for your new units -->
+    <button onclick="game.recruitUnitFromFile('kamen_rider_zeztz.json')">**Recruit Zeztz (Steel)**</button>
+    <button onclick="game.recruitUnitFromFile('cure_mystery.json')">**Recruit Mystery (Psychic)**</button>
+
+    <!-- Kamen Rider Kabuto (2006) -->
+    <button onclick="game.recruitUnitFromFile('kamen_rider_kabuto.json')">Recruit Kabuto (Bug)</button>
+    <button onclick="game.recruitUnitFromFile('kamen_rider_gatack.json')">Recruit Gatack (Bug)</button>
+    <button onclick="game.recruitUnitFromFile('kamen_rider_thebee.json')">Recruit TheBee (Bug)</button>
+    <button onclick="game.recruitUnitFromFile('kamen_rider_drake.json')">Recruit Drake (Flying)</button>
+    <button onclick="game.recruitUnitFromFile('kamen_rider_sasword.json')">Recruit Sasword (Dragon)</button>
+    <button onclick="game.recruitUnitFromFile('kamen_rider_caucasus.json')">Recruit Caucasus (Steel)</button>
+    <button onclick="game.recruitUnitFromFile('kamen_rider_hercus.json')">Recruit Hercus (Bug)</button>
+    <button onclick="game.recruitUnitFromFile('kamen_rider_ketaros.json')">Recruit Ketaros (Bug)</button>
+    
+    <button onclick="game.recruitUnitFromFile('kamen_rider_den_o.json')">Recruit Den-O (Fighting)</button>
+    <button onclick="game.recruitUnitFromFile('kamen_rider_fourze.json')">Recruit Fourze (Normal)</button>
+    <button onclick="game.recruitUnitFromFile('kamen_rider_wizard.json')">Recruit Wizard (Fire)</button>
+    <button onclick="game.recruitUnitFromFile('kamen_rider_ex_aid.json')">Recruit Ex-Aid (Electric)</button>
+    <button onclick="game.recruitUnitFromFile('kamen_rider_brave.json')">Recruit Brave (Ice)</button>
+    <button onclick="game.recruitUnitFromFile('kamen_rider_snipe.json')">Recruit Snipe (Ground)</button>
+    <button onclick="game.recruitUnitFromFile('kamen_rider_lazer.json')">Recruit Lazer (Dark)</button>
+    <button onclick="game.recruitUnitFromFile('kamen_rider_genm.json')">Recruit Genm (Poison)</button>
+    <button onclick="game.recruitUnitFromFile('kamen_rider_para_dx.json')">Recruit Para-DX (Fighting)</button>
+    <button onclick="game.recruitUnitFromFile('kamen_rider_saber.json')">Recruit Saber (Fire)</button>
+    <button onclick="game.recruitUnitFromFile('kamen_rider_gold_drive.json')">**Recruit Gold Drive (Dark)**</button>
+    <button onclick="game.recruitUnitFromFile('cure_star.json')">**Recruit Cure Star (Normal)**</button>
+    <button onclick="game.recruitUnitFromFile('cure_milky.json')">**Recruit Cure Milky (Electric)**</button>
+    <button onclick="game.recruitUnitFromFile('cure_soleil.json')">**Recruit Cure Soleil (Fire)**</button>
+    <button onclick="game.recruitUnitFromFile('cure_selene.json')">**Recruit Cure Selene (Psychic)**</button>
+    <button onclick="game.recruitUnitFromFile('cure_cosmo.json')">**Recruit Cure Cosmo (Fairy)**</button>
+
+    <!-- Run for Money Secret Unit -->
+    <button onclick="game.recruitUnitFromFile('hunter_run_for_money.json')">Recruit Hunter (Secret Unit)</button>
+    
+    <button onclick="changeDifficulty()">Change Difficulty</button>
+    <button onclick="saveGame()">Save JSON</button>
+    <button onclick="game.upgradeTeam()">Unlimited Stat Upgrade</button>
+    </div>
+</div>
+
+<!-- This line links the HTML to your main game logic file in the 'script' folder -->
+<script src="./script/game.js"></script>
+
+</body>
+</html>
