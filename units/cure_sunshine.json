@@ -1,0 +1,15 @@
+{
+  "id": "PC-HC-003",
+  "name": "Cure Sunshine",
+  "jp_name": "キュアサンシャイン",
+  "type": "Grass",
+  "rarity": "Common",
+  "hp": 700,
+  "mp": 150,
+  "atk": 90,
+  "def": 95,
+  "agl": 50,
+  "en_passive": "Sunflower Aegis: Takes 15% less damage from ranged attacks.",
+  "jp_passive": "サンフラワーシールド: 遠隔攻撃から受けるダメージを15%軽減する。",
+  "ui_color": "Green"
+}
