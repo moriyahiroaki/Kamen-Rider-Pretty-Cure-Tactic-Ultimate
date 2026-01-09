@@ -1,0 +1,15 @@
+{
+  "id": "PC-HC-004",
+  "name": "Cure Moonlight",
+  "jp_name": "キュアムーンライト",
+  "type": "Psychic",
+  "rarity": "Common",
+  "hp": 650,
+  "mp": 180,
+  "atk": 100,
+  "def": 80,
+  "agl": 70,
+  "en_passive": "Moonlight Reflection: Has a 10% chance to reflect a ranged attack back at the attacker.",
+  "jp_passive": "ムーンライトリフレクション: 遠隔攻撃を攻撃者に反射する確率が10%ある。",
+  "ui_color": "Coral"
+}
