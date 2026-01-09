@@ -1,0 +1,15 @@
+{
+  "id": "PC-HC-001",
+  "name": "Cure Blossom",
+  "jp_name": "キュアブロッサム",
+  "type": "Fairy",
+  "rarity": "Common",
+  "hp": 600,
+  "mp": 160,
+  "atk": 80,
+  "def": 70,
+  "agl": 60,
+  "en_passive": "Blossom Butt Punch: Has a chance to stun (skip a turn) an enemy unit for 1 turn when using a melee attack.",
+  "jp_passive": "ブロッサムおしりパンチ: 近接攻撃時、敵ユニットを1ターンスタン（行動不能）させる確率がある。",
+  "ui_color": "Pink"
+}
