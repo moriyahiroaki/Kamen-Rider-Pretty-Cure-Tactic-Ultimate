@@ -1,0 +1,13 @@
+{
+  "id": "GEAR_HP_02_P_MP",
+  "name": "HP Module II (Compact, -MP)",
+  "jp_name": "HPモジュールII (コンパクト, -MP)",
+  "type": "Normal",
+  "rarity": "Uncommon",
+  "width": 1,
+  "height": 1,
+  "stats_plus": { "hp": 300, "mp": 0, "atk": 0, "def": 0, "agl": 0 },
+  "stats_minus": { "hp": 0, "mp": 20, "atk": 0, "def": 0, "agl": 0 },
+  "en_description": "High HP boost in a compact size (Tier II), but MP capacity is lowered.",
+  "jp_description": "コンパクトサイズでHPを大幅に増加させるが、MP容量が減少する（ティアII）。"
+}
