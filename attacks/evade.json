@@ -1,0 +1,11 @@
+{
+  "id": "EVADE",
+  "name": "Evade",
+  "jp_name": "回避",
+  "mp_cost": 0,
+  "type": "Normal",
+  "power_multiplier": 0.0,
+  "effect": "evade",
+  "en_description": "Attempt to dodge all incoming attacks this turn.",
+  "jp_description": "このターン中の全ての攻撃を回避しようとする。"
+}
