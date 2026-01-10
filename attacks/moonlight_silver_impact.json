@@ -1,0 +1,11 @@
+{
+  "id": "CM_IMP",
+  "name": "Moonlight Silver Impact",
+  "jp_name": "ムーンライトシルバーインパクト",
+  "mp_cost": 30,
+  "type": "Psychic",
+  "power_multiplier": 1.6,
+  "effect": "damage_single_target_melee",
+  "en_description": "A powerful, glowing psychic-enhanced physical strike against a single enemy.",
+  "jp_description": "単一の敵に対する、強力なサイキック強化物理攻撃。"
+}
