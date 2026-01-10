@@ -1,0 +1,15 @@
+{
+  "id": "PC-5G-006",
+  "name": "Milky Rose",
+  "jp_name": "ミルキィローズ",
+  "type": "Dragon",
+  "rarity": "Common",
+  "hp": 750,
+  "mp": 180,
+  "atk": 110,
+  "def": 90,
+  "agl": 80,
+  "en_passive": "Milky Rose Blossom: If HP is below 50%, ATK and DEF increase by 20%.",
+  "jp_passive": "ミルキィローズブロッサム: HPが50%以下の場合、ATKとDEFが20%増加する。",
+  "ui_color": "Indigo"
+}
