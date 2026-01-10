@@ -1,0 +1,11 @@
+{
+  "id": "CB_BBP",
+  "name": "Blossom Butt Punch",
+  "jp_name": "ブロッサムおしりパンチ",
+  "mp_cost": 20,
+  "type": "Fighting",
+  "power_multiplier": 1.2,
+  "effect": "stun",
+  "en_description": "A powerful punch with a chance to stun the target for 1 turn.",
+  "jp_description": "敵を1ターン気絶（スタン）させる確率のある強力なパンチ。"
+}
