@@ -1,0 +1,11 @@
+{
+  "id": "CB_SHW",
+  "name": "Blossom Shower",
+  "jp_name": "ブロッサムシャワー",
+  "mp_cost": 10,
+  "type": "Fairy",
+  "power_multiplier": 0.8,
+  "effect": "damage_multi_target_ranged",
+  "en_description": "Fires a burst of cherry blossoms at multiple enemies.",
+  "jp_description": "複数の敵に桜吹雪を浴びせる。"
+}
