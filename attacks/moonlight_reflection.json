@@ -1,0 +1,11 @@
+{
+  "id": "CM_REF",
+  "name": "Moonlight Reflection",
+  "jp_name": "ムーンライトリフレクション",
+  "mp_cost": 40,
+  "type": "Psychic",
+  "power_multiplier": 0.0,
+  "effect": "reflect_ranged",
+  "en_description": "Creates a barrier that reflects the next incoming ranged attack back at the attacker (1 turn duration).",
+  "jp_description": "次の遠隔攻撃を攻撃者に反射するバリアを生成する（1ターン持続）。"
+}
