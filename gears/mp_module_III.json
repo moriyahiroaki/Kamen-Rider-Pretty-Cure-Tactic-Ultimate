@@ -1,0 +1,13 @@
+{
+  "id": "GEAR_MP_03",
+  "name": "MP Module III",
+  "jp_name": "MPモジュールIII",
+  "type": "Psychic",
+  "rarity": "Rare",
+  "width": 3,
+  "height": 2,
+  "stats_plus": { "hp": 0, "mp": 200, "atk": 0, "def": 0, "agl": 0 },
+  "stats_minus": { "hp": 0, "mp": 0, "atk": 0, "def": 0, "agl": 0 },
+  "en_description": "Massive MP boost in a large size (Tier III). No stat penalties.",
+  "jp_description": "大サイズでMPを大幅に増加させる（ティアIII）。ステータスペナルティなし。"
+}
