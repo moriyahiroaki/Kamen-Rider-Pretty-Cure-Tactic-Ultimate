@@ -1,0 +1,15 @@
+{
+  "id": "PC-5G-004",
+  "name": "Cure Mint",
+  "jp_name": "キュアミント",
+  "type": "Grass",
+  "rarity": "Common",
+  "hp": 800,
+  "mp": 140,
+  "atk": 70,
+  "def": 100,
+  "agl": 40,
+  "en_passive": "Mint Shield: All allies take 5% less damage while Cure Mint is active.",
+  "jp_passive": "ミントシールド: キュアミントが活動中、味方全員が受けるダメージが5%減少する。",
+  "ui_color": "Green"
+}
