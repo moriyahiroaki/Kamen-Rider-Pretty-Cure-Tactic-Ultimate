@@ -1,0 +1,13 @@
+{
+  "id": "GEAR_MP_01",
+  "name": "MP Module I",
+  "jp_name": "MPモジュールI",
+  "type": "Psychic",
+  "rarity": "Common",
+  "width": 1,
+  "height": 1,
+  "stats_plus": { "hp": 0, "mp": 50, "atk": 0, "def": 0, "agl": 0 },
+  "stats_minus": { "hp": 0, "mp": 0, "atk": 0, "def": 0, "agl": 0 },
+  "en_description": "A small boost to MP with no negative effects (Tier I).",
+  "jp_description": "MPをわずかに増加させるが、マイナス効果はない（ティアI）。"
+}
