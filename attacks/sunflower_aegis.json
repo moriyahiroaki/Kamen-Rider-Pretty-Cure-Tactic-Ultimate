@@ -1,0 +1,11 @@
+{
+  "id": "CS_AEGIS",
+  "name": "Sunflower Aegis",
+  "jp_name": "サンフラワー・イージス",
+  "mp_cost": 20,
+  "type": "Grass",
+  "power_multiplier": 0.0,
+  "effect": "shield_self_and_adjacent_allies",
+  "en_description": "Summons a sunflower shield that protects self and allies from incoming attacks for 1 turn.",
+  "jp_description": "サンフラワーシールドを召喚し、自身と隣接する味方を1ターン保護する。"
+}
