@@ -1,0 +1,15 @@
+{
+  "id": "PC-SS-001",
+  "name": "Cure Bloom",
+  "jp_name": "キュアブルーム",
+  "type": "Fire",
+  "rarity": "Common",
+  "hp": 720,
+  "mp": 120,
+  "atk": 95,
+  "def": 80,
+  "agl": 60,
+  "en_passive": "Fierce Bloom: ATK increases by 10% when adjacent to Cure Egret/Bright.",
+  "jp_passive": "フィアースブルーム: キュアイーグレット/ブライトに隣接している場合、ATKが10%増加する。",
+  "ui_color": "Red"
+}
