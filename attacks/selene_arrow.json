@@ -1,0 +1,11 @@
+{
+  "id": "PC_SA",
+  "name": "Selene Arrow",
+  "jp_name": "セレーネアロー",
+  "mp_cost": 30,
+  "type": "Psychic",
+  "power_multiplier": 1.5,
+  "effect": "damage_ranged",
+  "en_description": "Fires a concentrated arrow of moonlight energy at a single target from a distance.",
+  "jp_description": "単一ターゲットに向け、月の光エネルギーを集束させた矢を遠距離から発射する。"
+}
