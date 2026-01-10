@@ -1,0 +1,13 @@
+{
+  "id": "GEAR_NULLIFY_IX",
+  "name": "Nullify Module IX",
+  "jp_name": "無効化モジュールIX",
+  "type": "Stellar",
+  "rarity": "Ultimate",
+  "width": 1,
+  "height": 1,
+  "stats_plus": { "hp": 0, "mp": 0, "atk": 0, "def": 0, "agl": 0 },
+  "stats_minus": { "hp": 0, "mp": 0, "atk": 0, "def": 0, "agl": 0 },
+  "en_description": "Nullifies all stat reductions from other equipped gears.",
+  "jp_description": "他の装備ギアによるすべてのステータス削減を無効化する。"
+}
