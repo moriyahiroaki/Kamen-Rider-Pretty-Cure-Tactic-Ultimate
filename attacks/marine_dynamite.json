@@ -1,0 +1,11 @@
+{
+  "id": "CM_DYN",
+  "name": "Marine Dynamite",
+  "jp_name": "マリンダイナマイト",
+  "mp_cost": 50,
+  "type": "Water",
+  "power_multiplier": 2.0,
+  "effect": "damage_all_enemies",
+  "en_description": "A massive, self-centered explosion that hits all enemies.",
+  "jp_description": "自分を中心とした大規模な爆発で、全ての敵にダメージを与える。"
+}
