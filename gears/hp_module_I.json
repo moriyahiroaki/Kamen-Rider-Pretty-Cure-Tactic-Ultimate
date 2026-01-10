@@ -1,0 +1,13 @@
+{
+  "id": "GEAR_HP_01",
+  "name": "HP Module I",
+  "jp_name": "HPモジュールI",
+  "type": "Normal",
+  "rarity": "Common",
+  "width": 1,
+  "height": 1,
+  "stats_plus": { "hp": 100, "mp": 0, "atk": 0, "def": 0, "agl": 0 },
+  "stats_minus": { "hp": 0, "mp": 0, "atk": 0, "def": 0, "agl": 0 },
+  "en_description": "A small boost to HP with no negative effects (Tier I).",
+  "jp_description": "HPをわずかに増加させるが、マイナス効果はない（ティアI）。"
+}
