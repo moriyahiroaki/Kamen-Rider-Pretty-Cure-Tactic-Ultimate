@@ -1,0 +1,11 @@
+{
+  "id": "BASIC_ATK",
+  "name": "Regular Attack",
+  "jp_name": "通常攻撃",
+  "mp_cost": 0,
+  "type": "Normal",
+  "power_multiplier": 1.0,
+  "effect": "damage",
+  "en_description": "A standard physical attack that deals damage based on ATK.",
+  "jp_description": "ATKに基づいた標準的な物理攻撃。"
+}
