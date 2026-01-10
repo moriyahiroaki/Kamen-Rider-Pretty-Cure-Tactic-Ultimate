@@ -1,0 +1,15 @@
+{
+  "id": "PC-SS-002",
+  "name": "Cure Egret",
+  "jp_name": "キュアイーグレット",
+  "type": "Flying",
+  "rarity": "Common",
+  "hp": 680,
+  "mp": 140,
+  "atk": 85,
+  "def": 75,
+  "agl": 85,
+  "en_passive": "Soaring Egret: AGL increases by 10% when adjacent to Cure Bloom/Windy.",
+  "jp_passive": "ソアリングイーグレット: キュアブルーム/ウィンディに隣接している場合、AGLが10%増加する。",
+  "ui_color": "Teal"
+}
