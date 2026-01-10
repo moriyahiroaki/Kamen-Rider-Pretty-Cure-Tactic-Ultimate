@@ -1,0 +1,15 @@
+{
+  "id": "PC-5G-003",
+  "name": "Cure Lemonade",
+  "jp_name": "キュアレモネード",
+  "type": "Electric",
+  "rarity": "Common",
+  "hp": 600,
+  "mp": 180,
+  "atk": 80,
+  "def": 65,
+  "agl": 90,
+  "en_passive": "Sparkling Flash: Has a chance to inflict 'Blind' status on physical attack.",
+  "jp_passive": "スパークリングフラッシュ: 物理攻撃時、「盲目」状態異常を付与する確率がある。",
+  "ui_color": "Yellow"
+}
