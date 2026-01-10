@@ -1,0 +1,13 @@
+{
+  "id": "GEAR_NULLIFY_VIII",
+  "name": "Nullify Module VIII",
+  "jp_name": "無効化モジュールVIII",
+  "type": "Stellar",
+  "rarity": "Mythical",
+  "width": 2,
+  "height": 2,
+  "stats_plus": { "hp": 0, "mp": 0, "atk": 0, "def": 0, "agl": 0 },
+  "stats_minus": { "hp": 0, "mp": 0, "atk": 0, "def": 0, "agl": 0 },
+  "en_description": "Nullifies all stat reductions from other equipped gears (Tier VIII size drawback only).",
+  "jp_description": "他の装備ギアによるすべてのステータス削減を無効化する（ティアVIIIサイズのみデメリット）。"
+}
