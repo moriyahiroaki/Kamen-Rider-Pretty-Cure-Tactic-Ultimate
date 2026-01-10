@@ -1,0 +1,11 @@
+{
+  "id": "DEFEND",
+  "name": "Defend",
+  "jp_name": "防御",
+  "mp_cost": 0,
+  "type": "Normal",
+  "power_multiplier": 0.0,
+  "effect": "defend",
+  "en_description": "Brace for impact, increasing DEF by 50% for 1 turn.",
+  "jp_description": "衝撃に備え、DEFを1ターン50%増加させる。"
+}
