@@ -1,0 +1,11 @@
+{
+  "id": "CM_SHW",
+  "name": "Marine Shoot",
+  "jp_name": "マリンシュート",
+  "mp_cost": 10,
+  "type": "Water",
+  "power_multiplier": 0.8,
+  "effect": "damage_multi_target_ranged",
+  "en_description": "Fires a burst of water bubbles at multiple enemies.",
+  "jp_description": "複数の敵に水の泡を浴びせる。"
+}
