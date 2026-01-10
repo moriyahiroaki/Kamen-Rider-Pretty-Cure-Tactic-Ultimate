@@ -1,0 +1,15 @@
+{
+  "id": "PC-5G-001",
+  "name": "Cure Dream",
+  "jp_name": "キュアドリーム",
+  "type": "Normal",
+  "rarity": "Common",
+  "hp": 650,
+  "mp": 150,
+  "atk": 90,
+  "def": 70,
+  "agl": 70,
+  "en_passive": "Dream Attack: Gains bonus MP for every critical hit landed.",
+  "jp_passive": "ドリームアタック: クリティカルヒット時にボーナスMPを獲得する。",
+  "ui_color": "White"
+}
