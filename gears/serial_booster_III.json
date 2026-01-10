@@ -1,0 +1,15 @@
+{
+  "id": "GEAR_SB_III",
+  "name": "Serial Booster III",
+  "jp_name": "シリアル・ブースターIII",
+  "type": "Electric",
+  "rarity": "Rare",
+  "width": 3,
+  "height": 2,
+  "stats_plus": { "hp": 0, "mp": 0, "atk": 0, "def": 0, "agl": 0 },
+  "stats_minus": { "hp": 0, "mp": 0, "atk": 0, "def": 0, "agl": 0 },
+  "passive_effect": "Boost Tiers I-III",
+  "jp_passive_effect": "ティアI〜IIIブースト",
+  "en_description": "Doubles stat boost and halves stat reduction of an equipped Tier I, II, or III gear.",
+  "jp_description": "装備中のティアI、II、IIIギアのステータス増加を倍にし、減少を半減させる。"
+}
