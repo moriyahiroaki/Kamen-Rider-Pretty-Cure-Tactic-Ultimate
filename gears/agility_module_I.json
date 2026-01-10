@@ -1,0 +1,13 @@
+{
+  "id": "GEAR_AGL_01",
+  "name": "Agility Module I",
+  "jp_name": "アジリティ・モジュールI",
+  "type": "Electric",
+  "rarity": "Common",
+  "width": 1,
+  "height": 1,
+  "stats_plus": { "hp": 0, "mp": 0, "atk": 0, "def": 0, "agl": 20 },
+  "stats_minus": { "hp": 0, "mp": 0, "atk": 0, "def": 0, "agl": 0 },
+  "en_description": "A small boost to AGL with no negative effects (Tier I).",
+  "jp_description": "AGLをわずかに増加させるが、マイナス効果はない（ティアI）。"
+}
