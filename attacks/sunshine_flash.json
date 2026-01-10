@@ -1,0 +1,11 @@
+{
+  "id": "CS_FLSH",
+  "name": "Sunshine Flash",
+  "jp_name": "サンシャインフラッシュ",
+  "mp_cost": 25,
+  "type": "Fire",
+  "power_multiplier": 1.3,
+  "effect": "damage_ranged",
+  "en_description": "Releases a burst of sunlight energy at a single target.",
+  "jp_description": "単一ターゲットに太陽エネルギーの光線を放つ。"
+}
