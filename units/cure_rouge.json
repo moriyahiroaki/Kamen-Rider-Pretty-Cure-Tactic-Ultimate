@@ -1,0 +1,15 @@
+{
+  "id": "PC-5G-002",
+  "name": "Cure Rouge",
+  "jp_name": "キュアルージュ",
+  "type": "Fire",
+  "rarity": "Common",
+  "hp": 700,
+  "mp": 120,
+  "atk": 100,
+  "def": 80,
+  "agl": 60,
+  "en_passive": "Fire Strike: Deals 1.2x damage if HP is above 75%.",
+  "jp_passive": "ファイアストライク: HPが75%以上の場合、ダメージが1.2倍になる。",
+  "ui_color": "Red"
+}
