@@ -1,0 +1,15 @@
+{
+  "id": "PC-5G-005",
+  "name": "Cure Aqua",
+  "jp_name": "キュアアクア",
+  "type": "Water",
+  "rarity": "Common",
+  "hp": 700,
+  "mp": 160,
+  "atk": 85,
+  "def": 85,
+  "agl": 65,
+  "en_passive": "Aqua Stream: Deals 1.2x damage to Fire-type enemies.",
+  "jp_passive": "アクアストリーム: ほのおタイプの敵に与えるダメージが1.2倍になる。",
+  "ui_color": "Blue"
+}
