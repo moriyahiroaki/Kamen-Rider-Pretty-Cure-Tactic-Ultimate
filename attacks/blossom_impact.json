@@ -1,0 +1,11 @@
+{
+  "id": "CB_IMP",
+  "name": "Blossom Impact",
+  "jp_name": "ブロッサムインパクト",
+  "mp_cost": 25,
+  "type": "Fighting",
+  "power_multiplier": 1.5,
+  "effect": "damage_single_target_melee",
+  "en_description": "Concentrates power into a single fist for a heavy physical blow.",
+  "jp_description": "力を込めた一撃で敵単体に大ダメージを与える。"
+}
