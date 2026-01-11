@@ -42,6 +42,33 @@ class Unit {
         this.baseDef = stats.def; this.baseAgl = stats.agl;
         this.equippedGears = []; 
         this.en_passive = stats.en_passive; this.jp_passive = stats.jp_passive;
+        this.statusEffects = []; // NEW: Array to store active buffs/debuffs
+    }
+
+    // NEW: Function to apply a new status effect
+    applyEffect(effectName, duration, amount = 0) {
+        const existingEffect = this.statusEffects.find(e => e.name === effectName);
+        if (existingEffect) {
+            existingEffect.duration = duration; // Refresh duration
+            existingEffect.amount = amount;
+        } else {
+            this.statusEffects.push({ name: effectName, duration: duration, amount: amount });
+        }
+    }
+
+    // NEW: Function to process effects at the start/end of a turn
+    processEffects(turnType) { // turnType can be 'start' or 'end'
+        this.statusEffects = this.statusEffects.map(effect => {
+            if (turnType === 'end') {
+                effect.duration -= 1;
+                // Add logic here for damage over time effects like Poison/Fire
+                if (effect.name === 'Poison' && effect.duration > 0) {
+                    // Placeholder damage logic
+                    this.baseHp -= Math.floor(this.baseHp * 0.05); 
+                }
+            }
+            return effect;
+        }).filter(effect => effect.duration > 0);
     }
 
     getEffectiveStats() {
@@ -76,6 +103,15 @@ class Unit {
             }
         }
         
+        // NEW: Apply temporary buffs/debuffs from statusEffects array
+        this.statusEffects.forEach(effect => {
+            if (effect.name === 'ATK_Buff') stats.atk += effect.amount;
+            if (effect.name === 'DEF_Buff') stats.def += effect.amount;
+            if (effect.name === 'AGL_Debuff') stats.agl -= effect.amount;
+            // Add other effects like Stun, Blind, etc. here
+            if (effect.name === 'Stun') stats.agl = 0; // Stunned units are last in turn order
+        });
+        
         return stats;
     }
 
@@ -98,7 +134,6 @@ class GameEngine {
         this.diffIndex = 3;
         this.currentLanguage = 'en';
         this.unlockedUnits = []; 
-        // NEW: Player's owned gears list (initialized with test data)
         this.playerGears = [
             { id: "GEAR_HP_01", name: "HP Module I", type: "Normal", width: 1, height: 1, stats_plus: { "hp": 100, "mp": 0, "atk": 0, "def": 0, "agl": 0 }, stats_minus: { "hp": 0, "mp": 0, "atk": 0, "def": 0, "agl": 0 } },
             { id: "GEAR_ATK_01", name: "ATK Module I", type: "Fighting", width: 1, height: 1, stats_plus: { "hp": 0, "mp": 0, "atk": 20, "def": 0, "agl": 0 }, stats_minus: { "hp": 0, "mp": 0, "atk": 0, "def": 0, "agl": 0 } },
@@ -147,8 +182,6 @@ class GameEngine {
         });
         this.updateUI();
     }
-
-    // NEW: Open the Gear Equip UI (Placeholder for now)
     openGearEquipUI(unitIndex) {
         const unit = this.team[unitIndex];
         const gridSize = CONFIG.GEAR_GRID_SIZES[unit.rarity];
@@ -156,20 +189,18 @@ class GameEngine {
             alert("This unit rarity does not have a defined gear grid size!");
             return;
         }
-
-        // In a real game, you would create an HTML Modal/UI here to display the grid
         console.log(`Open Gear Equip UI for ${unit.name}`);
         console.log(`Grid Size: ${gridSize.width}x${gridSize.height}`);
         console.log("Equipped Gears:", unit.equippedGears);
         console.log("Player Owned Gears:", this.playerGears);
-        alert(`Check the console. Gear UI logic has been added to 'game.js', but the visual HTML/CSS UI has not been created yet.`);
+        // NEW: Example of applying a buff for testing purposes
+        unit.applyEffect('ATK_Buff', 3, 50); // Apply +50 ATK buff for 3 turns
+        this.updateUI(); // Update UI to reflect new temporary stats
+        alert(`Check the console. Gear UI logic has been added to 'game.js'. A temporary ATK buff has been applied for testing!`);
     }
-
-    // equipItem method replaced by openGearEquipUI
     equipItem(idx) {
         this.openGearEquipUI(idx);
     }
-
     updateUI() {
         const field = document.getElementById('battlefield');
         field.innerHTML = '';
@@ -179,9 +210,11 @@ class GameEngine {
             card.className = `card ${isUlt ? 'rarity-ultimate' : ''}`;
             card.style.backgroundColor = isUlt ? '' : `var(--${u.type})`;
             const passiveText = (this.currentLanguage === 'jp') ? u.jp_passive : u.en_passive;
-            
             const effectiveStats = u.getEffectiveStats();
             
+            // NEW: Display active status effects in the UI
+            const effectsList = u.statusEffects.map(e => `${e.name} (${e.duration} turns left)`).join(', ');
+
             card.innerHTML = `
                 <strong>${(this.currentLanguage === 'jp') ? u.jp_name : u.name}</strong><br>
                 <small>${u.rarity} | ${u.type}</small>
@@ -189,8 +222,8 @@ class GameEngine {
                     HP: ${effectiveStats.hp} | ATK: ${effectiveStats.atk}<br>
                     DEF: ${effectiveStats.def} | AGL: ${effectiveStats.agl}<br>
                     <i>Passive: ${passiveText || 'N/A'}</i>
+                    ${effectsList ? `<br><i>Effects: ${effectsList}</i>` : ''} 
                 </div>
-                <!-- Updated the Equip Button to use the new UI function -->
                 <button onclick="game.openGearEquipUI(${index})" style="font-size:10px; margin-top:5px;">Equip Gear</button>
             `;
             field.appendChild(card);
