@@ -22,7 +22,7 @@ const CONFIG = {
         Steel:    { Fire: 0.5, Water: 0.5, Electric: 0.5, Ice: 2, Rock: 2, Steel: 0.5, Fairy: 2 },
         Fairy:    { Fire: 0.5, Fighting: 2, Poison: 0.5, Dragon: 2, Dark: 2, Steel: 0.5 }
     },
-    GEAR_GRID_SIZES: {
+        GEAR_GRID_SIZES: {
         "Common": { width: 3, height: 3 }, "Uncommon": { width: 3, height: 4 }, "Rare": { width: 4, height: 4 }, 
         "Very Rare": { width: 4, height: 5 }, "Epic": { width: 5, height: 5 }, "Heroic": { width: 5, height: 6 }, 
         "Legendary": { width: 6, height: 6 }, "Mythical": { width: 6, height: 7 }, "Ultimate": { width: 7, height: 7 }
@@ -53,7 +53,6 @@ class Unit {
         let totalPenalties = { hp: 0, mp: 0, atk: 0, def: 0, agl: 0 };
 
         this.equippedGears.forEach(gear => {
-            // Check for Tier VIII or IX nullifier ID
             if (gear.id === "GEAR_NULLIFY_IX" || gear.id === "GEAR_NULLIFY_VIII") {
                 hasNullifier = true; 
             }
@@ -81,20 +80,13 @@ class Unit {
     }
 
     getDamageAgainst(target) {
-        // Use effective ATK in combat calculation
         const effectiveStats = this.getEffectiveStats(); 
         let multiplier = 1.0;
-        
-        if (this.rarity === "Ultimate") {
-            multiplier = 2.0;
-        } else if (CONFIG.CHART[this.type] && CONFIG.CHART[this.type][target.type] !== undefined) {
+        if (this.rarity === "Ultimate") { multiplier = 2.0; } 
+        else if (CONFIG.CHART[this.type] && CONFIG.CHART[this.type][target.type] !== undefined) {
             multiplier = CONFIG.CHART[this.type][target.type];
         }
-
-        // Accessories logic might need adjustment later to combine with new gear system
         let equipmentAtk = effectiveStats.atk;
-        // this.slots.forEach(acc => { ... }); 
-
         return Math.floor(equipmentAtk * multiplier);
     }
 }
@@ -106,6 +98,13 @@ class GameEngine {
         this.diffIndex = 3;
         this.currentLanguage = 'en';
         this.unlockedUnits = []; 
+        // NEW: Player's owned gears list (initialized with test data)
+        this.playerGears = [
+            { id: "GEAR_HP_01", name: "HP Module I", type: "Normal", width: 1, height: 1, stats_plus: { "hp": 100, "mp": 0, "atk": 0, "def": 0, "agl": 0 }, stats_minus: { "hp": 0, "mp": 0, "atk": 0, "def": 0, "agl": 0 } },
+            { id: "GEAR_ATK_01", name: "ATK Module I", type: "Fighting", width: 1, height: 1, stats_plus: { "hp": 0, "mp": 0, "atk": 20, "def": 0, "agl": 0 }, stats_minus: { "hp": 0, "mp": 0, "atk": 0, "def": 0, "agl": 0 } },
+            { id: "GEAR_DEF_01", name: "DEF Module I", type: "Steel", width: 1, height: 1, stats_plus: { "hp": 0, "mp": 0, "atk": 0, "def": 20, "agl": 0 }, stats_minus: { "hp": 0, "mp": 0, "atk": 0, "def": 0, "agl": 0 } },
+            { id: "GEAR_HP_02_P_ATK", name: "HP Module II (Compact, -ATK)", type: "Normal", width: 1, height: 1, stats_plus: { "hp": 300, "mp": 0, "atk": 0, "def": 0, "agl": 0 }, stats_minus: { "hp": 0, "mp": 0, "atk": 10, "def": 0, "agl": 0 } }
+        ];
     }
     
     toggleLanguage() { this.currentLanguage = (this.currentLanguage === 'en') ? 'jp' : 'en'; this.updateUI(); }
@@ -140,21 +139,37 @@ class GameEngine {
     }
     upgradeTeam() {
         this.team.forEach(u => {
-            // Note: Upgrades should likely apply to base stats, not effective stats.
             u.baseHp += 200; u.baseAtk += 50; u.baseDef += 30; u.baseAgl += 20; 
             let rIdx = CONFIG.RARITIES.indexOf(u.rarity);
             if (rIdx < CONFIG.RARITIES.length - 1) {
                 u.rarity = CONFIG.RARITIES[rIdx + 1];
-                // u.maxSlots = Math.min(8, rIdx + 2); // Accessory logic needs review
             }
         });
         this.updateUI();
     }
-    equipItem(idx) {
-        alert("Gear system UI not yet implemented. Cannot equip items this way yet!");
-        // const unit = this.team[idx];
-        // if(unit.slots.length < unit.maxSlots) { ... }
+
+    // NEW: Open the Gear Equip UI (Placeholder for now)
+    openGearEquipUI(unitIndex) {
+        const unit = this.team[unitIndex];
+        const gridSize = CONFIG.GEAR_GRID_SIZES[unit.rarity];
+        if (!gridSize) {
+            alert("This unit rarity does not have a defined gear grid size!");
+            return;
+        }
+
+        // In a real game, you would create an HTML Modal/UI here to display the grid
+        console.log(`Open Gear Equip UI for ${unit.name}`);
+        console.log(`Grid Size: ${gridSize.width}x${gridSize.height}`);
+        console.log("Equipped Gears:", unit.equippedGears);
+        console.log("Player Owned Gears:", this.playerGears);
+        alert(`Check the console. Gear UI logic has been added to 'game.js', but the visual HTML/CSS UI has not been created yet.`);
     }
+
+    // equipItem method replaced by openGearEquipUI
+    equipItem(idx) {
+        this.openGearEquipUI(idx);
+    }
+
     updateUI() {
         const field = document.getElementById('battlefield');
         field.innerHTML = '';
@@ -165,7 +180,7 @@ class GameEngine {
             card.style.backgroundColor = isUlt ? '' : `var(--${u.type})`;
             const passiveText = (this.currentLanguage === 'jp') ? u.jp_passive : u.en_passive;
             
-            const effectiveStats = u.getEffectiveStats(); // Get current stats
+            const effectiveStats = u.getEffectiveStats();
             
             card.innerHTML = `
                 <strong>${(this.currentLanguage === 'jp') ? u.jp_name : u.name}</strong><br>
@@ -175,8 +190,8 @@ class GameEngine {
                     DEF: ${effectiveStats.def} | AGL: ${effectiveStats.agl}<br>
                     <i>Passive: ${passiveText || 'N/A'}</i>
                 </div>
-                <!-- Gear/Accessory UI needs implementation here -->
-                <button onclick="game.equipItem(${index})" style="font-size:10px; margin-top:5px;">Equip Gear</button>
+                <!-- Updated the Equip Button to use the new UI function -->
+                <button onclick="game.openGearEquipUI(${index})" style="font-size:10px; margin-top:5px;">Equip Gear</button>
             `;
             field.appendChild(card);
         });
