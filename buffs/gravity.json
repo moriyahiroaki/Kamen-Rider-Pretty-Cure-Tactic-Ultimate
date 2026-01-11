@@ -1,0 +1,10 @@
+{
+  "id": "STATUS_GRAVITY",
+  "name": "Gravity",
+  "jp_name": "じゅうりょく",
+  "type": "debuff",
+  "duration_type": "turns",
+  "effect_mechanic": "grounded",
+  "en_description": "Affected units are considered Grounded. Flying-type units lose their immunity to Ground-type attacks.",
+  "jp_description": "影響を受けたユニットは接地状態と見なされる。ひこうタイプユニットはじめんタイプの攻撃に対する耐性を失う。"
+}
