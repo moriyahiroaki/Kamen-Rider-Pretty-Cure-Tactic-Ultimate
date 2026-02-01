@@ -265,6 +265,7 @@ function testUnlockStrengthShinobi() { game.unlockSecretUnit("EXT-RM-003"); }
 function testUnlockSpeedyShinobi() { game.unlockSecretUnit("EXT-RM-004"); }
 function testUnlockTechnicalShinobi() { game.unlockSecretUnit("EXT-RM-005"); }
 function testUnlockHeavyShinobi() { game.unlockSecretUnit("EXT-RM-006"); }
+function testUnlockTahu() { game.unlockSecretUnit("EXT-BION-001"); }
 function changeDifficulty() { game.diffIndex = (game.diffIndex + 1) % CONFIG.DIFFICULTIES.length; game.updateUI(); }
 function saveGame() { const data = JSON.stringify(game); const blob = new Blob([data], {type: "application/json"}); const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = "Ultimate_Battle_2026.json"; a.click(); }
 function startJackpotArenaTournament() { const currentDifficulty = CONFIG.DIFFICULTIES[game.diffIndex]; alert(`Jackpot Arena (Difficulty: ${currentDifficulty}) Initiated! Get ready for the 1v1 knockout tournament!`); console.log("Tournament started. Logic for elimination and jackpot reward needs implementation."); }
