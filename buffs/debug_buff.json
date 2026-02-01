@@ -1,0 +1,10 @@
+{
+  "id": "DEBUG_STATUS_BUFF",
+  "name": "Debug Buff",
+  "jp_name": "デバッグバフ",
+  "type": "buff",
+  "duration_type": "turns",
+  "stat_modifier": "atk",
+  "en_description": "A temporary ATK buff for testing the status effect system.",
+  "jp_description": "ステータス効果システムをテストするための一時的なATKバフ。"
+}
