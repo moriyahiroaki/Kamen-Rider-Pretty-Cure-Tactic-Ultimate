@@ -1,0 +1,11 @@
+{
+  "id": "DEBUG_ATK_BASIC",
+  "name": "Debug Punch",
+  "jp_name": "テストパンチ",
+  "mp_cost": 0,
+  "type": "Fighting",
+  "power_multiplier": 1.0,
+  "effect": "damage",
+  "en_description": "A basic attack for testing combat logic.",
+  "jp_description": "戦闘ロジックをテストするための基本的な攻撃。"
+}
