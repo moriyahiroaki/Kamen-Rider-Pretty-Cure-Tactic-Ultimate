@@ -1,0 +1,15 @@
+{
+  "id": "DEBUG_TEST_001",
+  "name": "Test Unit",
+  "jp_name": "テストユニット",
+  "type": "Normal",
+  "rarity": "Common",
+  "hp": 500,
+  "mp": 100,
+  "atk": 50,
+  "def": 50,
+  "agl": 50,
+  "en_passive": "Basic Test Passive: Used for debugging stats.",
+  "jp_passive": "基本テストパッシブ：ステータスのデバッグに使用されます。",
+  "ui_color": "White"
+}
