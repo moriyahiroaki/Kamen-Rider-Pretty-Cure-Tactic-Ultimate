@@ -1,0 +1,16 @@
+{
+  "id": "EXT-BION-001",
+  "name": "Tahu",
+  "jp_name": "タフ",
+  "type": "Fire",
+  "rarity": "Common",
+  "hp": 650,
+  "mp": 120,
+  "atk": 75,
+  "def": 60,
+  "agl": 55,
+  "en_passive": "Kanohi Hau: 20% chance to nullify damage.",
+  "jp_passive": "カノヒ・ハウ：20％の確率でダメージを無効化する。",
+  "ui_color": "#FF0000",
+  "unlocked": false
+}
