@@ -1,0 +1,13 @@
+{
+  "id": "BION_ATK_TAKANUVA",
+  "name": "Staff of Light Strike",
+  "jp_name": "光の杖・ストライク",
+  "mp_cost": 35,
+  "type": "Fairy",
+  "power_multiplier": 1.6,
+  "accuracy": 100,
+  "effect": "damage",
+  "shadow": false,
+  "en_description": "A brilliant light strike that never misses the target.",
+  "jp_description": "標的に必ず命中する輝く光の攻撃。"
+}
