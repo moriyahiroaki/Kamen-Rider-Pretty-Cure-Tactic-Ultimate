@@ -284,5 +284,47 @@ function testUnlockTakanuva() { game.unlockSecretUnit("EXT-BION-007"); }
 function testUnlockMakuta() { game.unlockSecretUnit("EXT-BION-008"); }
 function changeDifficulty() { game.diffIndex = (game.diffIndex + 1) % CONFIG.DIFFICULTIES.length; game.updateUI(); }
 function saveGame() { const data = JSON.stringify(game); const blob = new Blob([data], {type: "application/json"}); const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = "Ultimate_Battle_2026.json"; a.click(); }
-function startJackpotArenaTournament() { const currentDifficulty = CONFIG.DIFFICULTIES[game.diffIndex]; alert(`Jackpot Arena (Difficulty: ${currentDifficulty}) Initiated! Get ready for the 1v1 knockout tournament!`); console.log("Tournament started. Logic for elimination and jackpot reward needs implementation."); }
+function startJackpotArenaTournament() {
+    const currentDifficulty = CONFIG.DIFFICULTIES[game.diffIndex];
+    let participants = 1024;
+    let playerWon = true;
+
+    alert(`Jackpot Arena (${currentDifficulty}) Initiated! 1,024 combatants entered.`);
+
+    // There are 10 rounds to go from 1024 to 1 winner (2^10 = 1024)
+    for (let round = 1; round <= 10; round++) {
+        participants /= 2;
+        
+        // Simulation of difficulty check
+        // Higher difficulties (Hell/Death) would have a much lower win probability
+        let winChance = 0.9 - (game.diffIndex * 0.08); 
+        if (Math.random() > winChance) {
+            playerWon = false;
+            alert(`Round ${round}: You were eliminated! Remaining CPUs: ${participants}`);
+            break;
+        } else {
+            alert(`Round ${round} Victory! Participants remaining: ${participants}`);
+        }
+    }
+
+    if (playerWon) {
+        alert("CONGRATULATIONS! You are the Jackpot Arena Champion!");
+        checkJackpotReward();
+    }
+}
+
+function checkJackpotReward() {
+    // Progressive Jackpot logic: 1,000 to 6,000 materials
+    const currentJackpotMaterials = Math.floor(Math.random() * 5000) + 1000;
+    
+    // Distribute the reward to your material pool
+    // This uses the Universal Currency (Material) system from your notes
+    for (let type in game.materials) {
+        game.materials[type] += Math.floor(currentJackpotMaterials / 7);
+    }
+    
+    game.credits += 10; // Bonus recruitment credits for winning
+    alert(`You won the Jackpot! Received ${currentJackpotMaterials} total materials and 10 Credits!`);
+    game.updateUI();
+}
 function checkJackpotReward() { const currentJackpotMaterials = Math.floor(Math.random() * 5000) + 1000; console.log(`Congratulations! You won ${currentJackpotMaterials} materials!`); game.credits += 10; game.updateUI(); }
