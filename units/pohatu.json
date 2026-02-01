@@ -1,0 +1,11 @@
+{
+  "id": "EXT-BION-005",
+  "name": "Pohatu",
+  "jp_name": "ポハツ",
+  "type": "Rock",
+  "rarity": "Common",
+  "hp": 640, "mp": 110, "atk": 80, "def": 70, "agl": 90,
+  "en_passive": "Kanohi Kakama: High chance to act first in turn.",
+  "jp_passive": "カノヒ・カカマ：ターン内で先制攻撃する確率が高い。",
+  "ui_color": "#F5F5DC"
+}
