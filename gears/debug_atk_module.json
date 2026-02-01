@@ -1,0 +1,13 @@
+{
+  "id": "DEBUG_GEAR_ATK_01",
+  "name": "Debug ATK Module",
+  "jp_name": "デバッグATKモジュール",
+  "type": "Fighting",
+  "rarity": "Common",
+  "width": 1,
+  "height": 1,
+  "stats_plus": { "hp": 0, "mp": 0, "atk": 10, "def": 0, "agl": 0 },
+  "stats_minus": { "hp": 0, "mp": 0, "atk": 0, "def": 0, "agl": 0 },
+  "en_description": "Test gear for ATK boost (Tier I).",
+  "jp_description": "ATKブースト用のテストギア（ティアI）。"
+}
