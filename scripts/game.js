@@ -21,14 +21,21 @@ const CONFIG = {
         Dark:     { Fighting: 0.5, Psychic: 2, Ghost: 2, Dark: 0.5, Fairy: 0.5 },
         Steel:    { Fire: 0.5, Water: 0.5, Electric: 0.5, Ice: 2, Rock: 2, Steel: 0.5, Fairy: 2 },
         Fairy:    { Fire: 0.5, Fighting: 2, Poison: 0.5, Dragon: 2, Dark: 2, Steel: 0.5 }
-    },
-        GEAR_GRID_SIZES: {
+    GEAR_GRID_SIZES: {
         "Common": { width: 3, height: 3 }, "Uncommon": { width: 3, height: 4 }, "Rare": { width: 4, height: 4 }, 
         "Very Rare": { width: 4, height: 5 }, "Epic": { width: 5, height: 5 }, "Heroic": { width: 5, height: 6 }, 
         "Legendary": { width: 6, height: 6 }, "Mythical": { width: 6, height: 7 }, "Ultimate": { width: 7, height: 7 }
-    }
+    },
+    MATERIAL_MAP: {
+        Fire: 'Ruby', Ground: 'Ruby', Dragon: 'Ruby',
+        Dark: 'Amethyst', Ghost: 'Amethyst', Poison: 'Amethyst',
+        Electric: 'Topaz', Psychic: 'Topaz', Fairy: 'Topaz',
+        Normal: 'Diamond', Ice: 'Diamond', Steel: 'Diamond',
+        Grass: 'Emerald', Flying: 'Emerald', Bug: 'Emerald',
+        Water: 'Sapphire', Fighting: 'Sapphire', Rock: 'Sapphire'
+    },
+    UPGRADE_COST_CLUSTERS: 1 // Cost to upgrade one tier (e.g., Common->Uncommon)
 };
-
 class Accessory {
     constructor(name, type, rarity = "Common", atkBonus = 20) {
         this.name = name; this.type = type; this.rarity = rarity; this.atkBonus = atkBonus;
@@ -169,14 +176,27 @@ class GameEngine {
             if (this.team.length >= 5) this.credits--; this.team.push(new Unit(unitData.name, unitData.type, unitData)); this.updateUI();
         } catch (error) { console.error("Failed to load unit from file:", error); alert("Could not load unit file. Make sure you are running on a local server!"); }
     }
-    checkUpgradeCost(unitType, currentRarity) {
-        // ... (Material logic placeholder) ...
-        console.log(`To upgrade a ${unitType} unit from ${currentRarity} rarity, you need the following material: Cluster.`);
-        alert(`Upgrade logic needs material inventory management implemented first! Check console for required material.`);
-        return false; 
-    }
-    upgradeTeam() {
-        this.team.forEach(u => { /* ... (Upgrade logic removed until materials added) ... */ });
+     upgradeTeam() {
+        this.team.forEach(u => {
+            if (CONFIG.RARITIES.indexOf(u.rarity) >= CONFIG.RARITIES.length - 1) {
+                alert(`${u.name} is already at max rarity (Ultimate)!`);
+                return; // Skip if already max rarity
+            }
+
+            if (this.checkUpgradeCost(u.type, u.rarity)) {
+                 const requiredMaterialType = CONFIG.MATERIAL_MAP[u.type];
+                 this.materials[requiredMaterialType] -= CONFIG.UPGRADE_COST_CLUSTERS; // Consume material
+
+                 // Apply stat upgrades to base stats
+                 u.baseHp += 200; u.baseAtk += 50; u.baseDef += 30; u.baseAgl += 20; 
+                 
+                 // Increment rarity tier
+                 let rIdx = CONFIG.RARITIES.indexOf(u.rarity);
+                 u.rarity = CONFIG.RARITIES[rIdx + 1];
+                 
+                 alert(`Upgraded ${u.name} to ${u.rarity}! Consumed 1 ${requiredMaterialType} Cluster.`);
+            }
+        });
         this.updateUI();
     }
     openGearEquipUI(unitIndex) {
