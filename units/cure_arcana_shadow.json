@@ -1,0 +1,15 @@
+{
+  "id": "PC_SHADOW_001",
+  "name": "Cure Arcana Shadow",
+  "jp_name": "キュアアルカナ・シャドウ (廻璃阿るるか)",
+  "type": "Dark",
+  "rarity": "Common",
+  "hp": 550,
+  "mp": 200,
+  "atk": 110,
+  "def": 60,
+  "agl": 90,
+  "en_passive": "Cure Arcana Shadow's Passive: Stealth abilities and affinity for Shadow moves.",
+  "jp_passive": "キュアアルカナ・シャドウのパッシブ: ステルス能力とシャドウ技への親和性。",
+  "ui_color": "Black"
+}
