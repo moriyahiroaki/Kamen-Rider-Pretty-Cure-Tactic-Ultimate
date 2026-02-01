@@ -1,0 +1,13 @@
+{
+  "id": "ATK_SHADOW_BOOST",
+  "name": "Shadow Boost",
+  "jp_name": "シャドー・ブースト",
+  "mp_cost": 40,
+  "type": "Normal",
+  "power_multiplier": 0.0,
+  "accuracy": 100,
+  "effect": "status_buff_hp_halving",
+  "shadow": true,
+  "en_description": "Massively boosts ATK and DEF for 3 turns, but halves the user's current HP.",
+  "jp_description": "3ターンの間ATKとDEFを大幅に増加させるが、使用者の現在のHPを半分にする。"
+}
