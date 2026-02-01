@@ -1,0 +1,13 @@
+{
+  "id": "BION_ATK_GALI",
+  "name": "Tidal Wave",
+  "jp_name": "タイダルウェーブ",
+  "mp_cost": 25,
+  "type": "Water",
+  "power_multiplier": 1.3,
+  "accuracy": 95,
+  "effect": "damage",
+  "shadow": false,
+  "en_description": "A massive wave that crashes into the enemy team.",
+  "jp_description": "敵チームに激突する巨大な波。"
+}
