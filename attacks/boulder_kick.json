@@ -1,0 +1,13 @@
+{
+  "id": "BION_ATK_POHATU",
+  "name": "Kodan Ball Kick",
+  "jp_name": "コーダン・ボール・キック",
+  "mp_cost": 50,
+  "type": "Rock",
+  "power_multiplier": 2.5,
+  "accuracy": 20,
+  "effect": "damage",
+  "shadow": false,
+  "en_description": "A high-risk, high-power kick. Accuracy is capped at 50%.",
+  "jp_description": "ハイリスク・ハイパワーなキック。最大命中率は50%に制限される。"
+}
