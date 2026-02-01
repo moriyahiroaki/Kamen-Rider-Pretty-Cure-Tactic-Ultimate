@@ -1,0 +1,13 @@
+{
+  "id": "BION_ATK_ONUA",
+  "name": "Earth Breaker",
+  "jp_name": "アース・ブレイカー",
+  "mp_cost": 30,
+  "type": "Ground",
+  "power_multiplier": 1.5,
+  "accuracy": 95,
+  "effect": "damage",
+  "shadow": false,
+  "en_description": "A powerful claw strike that ruptures the ground.",
+  "jp_description": "地面を破裂させる強力な爪撃。"
+}
