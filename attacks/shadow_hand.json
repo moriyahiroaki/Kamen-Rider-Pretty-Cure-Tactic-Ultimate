@@ -2,12 +2,12 @@
   "id": "BION_ATK_MAKUTA",
   "name": "Shadow Hand",
   "jp_name": "シャドウ・ハンド",
-  "mp_cost": 40,
+  "mp_cost": 45,
   "type": "Dark",
-  "power_multiplier": 2.2,
-  "accuracy": 90,
+  "power_multiplier": 1.8,
+  "accuracy": 95,
   "effect": "damage",
-  "shadow": true,
-  "en_description": "Powerful dark energy that damages both the user and target.",
-  "jp_description": "使用者と標的の両方にダメージを与える強力な闇のエネルギー。"
+  "shadow": false,
+  "en_description": "A devastating reach of shadow energy that crushes the target.",
+  "jp_description": "標的を打ち砕く破壊的な闇のエネルギーの波動。"
 }
