@@ -1,7 +1,7 @@
 {
   "id": "ATK_SHADOW_BOOST",
   "name": "Shadow Boost",
-  "jp_name": "シャドー・ブースト",
+  "jp_name": "シャドウ・ブースト",
   "mp_cost": 40,
   "type": "Normal",
   "power_multiplier": 0.0,
