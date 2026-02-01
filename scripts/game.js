@@ -247,7 +247,23 @@ class GameEngine {
             field.appendChild(card);
         });
         document.getElementById('credit-count').innerText = this.credits; document.getElementById('difficulty-text').innerText = CONFIG.DIFFICULTIES[this.diffIndex];
-        const secretUnits = {'EXT-RM-001': 'btn-hunter', 'EXT-RM-002': 'btn-shinobi', 'EXT-RM-003': 'btn-strength-shinobi','EXT-RM-004': 'btn-speedy-shinobi', 'EXT-RM-005': 'btn-technical-shinobi', 'EXT-RM-006': 'btn-heavy-shinobi'};
+        const secretUnits = {
+            'EXT-RM-001': 'btn-hunter', 
+            'EXT-RM-002': 'btn-shinobi', 
+            'EXT-RM-003': 'btn-strength-shinobi',
+            'EXT-RM-004': 'btn-speedy-shinobi', 
+            'EXT-RM-005': 'btn-technical-shinobi', 
+            'EXT-RM-006': 'btn-heavy-shinobi'
+            'EXT-BION-001': 'btn-tahu',
+            'EXT-BION-002': 'btn-kopaka',
+            'EXT-BION-003': 'btn-gali',
+            'EXT-BION-004': 'btn-lewa',
+            'EXT-BION-005': 'btn-pohatu',
+            'EXT-BION-006': 'btn-onua',
+            'EXT-BION-007': 'btn-takanuva',
+            'EXT-BION-008': 'btn-makuta'
+        };
+    
         for (const unitId in secretUnits) {
             const buttonId = secretUnits[unitId]; const button = document.getElementById(buttonId);
             if (button) {
