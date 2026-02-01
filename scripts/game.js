@@ -98,6 +98,10 @@ class Unit {
             if (effect.name === 'AGL_Debuff') stats.agl -= effect.amount;
             if (effect.name === 'Stun') stats.agl = 0;
         });
+
+        if (this.passive_effect_id === "PASSIVE_DEF_HALVED") {
+            stats.def = Math.floor(stats.def / 2); // Apply the passive downside
+        }
         
         return stats;
     }
