@@ -1,15 +1,15 @@
 {
-  "id": "PC-ST-001",
+  "id": "PC_STAR_001",
   "name": "Cure Star",
-  "jp_name": "キュアスター",
+  "jp_name": "キュアスター (星奈ひかる)",
   "type": "Normal",
   "rarity": "Common",
   "hp": 650,
-  "mp": 150,
-  "atk": 80,
+  "mp": 100,
+  "atk": 70,
   "def": 70,
-  "agl": 60,
-  "en_passive": "Imagination Power: Small chance to avoid fatal damage once per battle.",
-  "jp_passive": "イマジネーションパワー: バトル中一度だけ、致命的なダメージを低確率で回避する。",
+  "agl": 110,
+  "en_passive": "Star Imagination: Boosts all stats slightly when MP is above 50%.",
+  "jp_passive": "スターイマジネーション: MPが50%を超えると全ステータスがわずかに上昇する。",
   "ui_color": "White"
 }
