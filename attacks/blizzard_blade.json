@@ -1,0 +1,13 @@
+{
+  "id": "BION_ATK_KOPAKA",
+  "name": "Blizzard Blade",
+  "jp_name": "ブリザード・ブレード",
+  "mp_cost": 30,
+  "type": "Ice",
+  "power_multiplier": 1.4,
+  "accuracy": 100,
+  "effect": "damage",
+  "shadow": false,
+  "en_description": "A guaranteed hit ice strike that ignores accuracy debuffs.",
+  "jp_description": "命中率のデバフを無視する必中の氷の攻撃。"
+}
