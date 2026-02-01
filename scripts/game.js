@@ -42,30 +42,24 @@ class Unit {
         this.baseDef = stats.def; this.baseAgl = stats.agl;
         this.equippedGears = []; 
         this.en_passive = stats.en_passive; this.jp_passive = stats.jp_passive;
-        this.statusEffects = []; // NEW: Array to store active buffs/debuffs
+        this.statusEffects = [];
     }
 
-    // NEW: Function to apply a new status effect
     applyEffect(effectName, duration, amount = 0) {
         const existingEffect = this.statusEffects.find(e => e.name === effectName);
         if (existingEffect) {
-            existingEffect.duration = duration; // Refresh duration
+            existingEffect.duration = duration;
             existingEffect.amount = amount;
         } else {
             this.statusEffects.push({ name: effectName, duration: duration, amount: amount });
         }
     }
 
-    // NEW: Function to process effects at the start/end of a turn
-    processEffects(turnType) { // turnType can be 'start' or 'end'
+    processEffects(turnType) {
         this.statusEffects = this.statusEffects.map(effect => {
             if (turnType === 'end') {
                 effect.duration -= 1;
                 // Add logic here for damage over time effects like Poison/Fire
-                if (effect.name === 'Poison' && effect.duration > 0) {
-                    // Placeholder damage logic
-                    this.baseHp -= Math.floor(this.baseHp * 0.05); 
-                }
             }
             return effect;
         }).filter(effect => effect.duration > 0);
@@ -80,48 +74,69 @@ class Unit {
         let totalPenalties = { hp: 0, mp: 0, atk: 0, def: 0, agl: 0 };
 
         this.equippedGears.forEach(gear => {
-            if (gear.id === "GEAR_NULLIFY_IX" || gear.id === "GEAR_NULLIFY_VIII") {
-                hasNullifier = true; 
-            }
-            for (const stat in gear.stats_plus) {
-                if (stats.hasOwnProperty(stat)) {
-                    stats[stat] += gear.stats_plus[stat];
-                }
-            }
-            for (const stat in gear.stats_minus) {
-                if (stats.hasOwnProperty(stat)) {
-                    totalPenalties[stat] += gear.stats_minus[stat];
-                }
-            }
+            if (gear.id === "GEAR_NULLIFY_IX" || gear.id === "GEAR_NULLIFY_VIII") { hasNullifier = true; }
+            for (const stat in gear.stats_plus) { if (stats.hasOwnProperty(stat)) { stats[stat] += gear.stats_plus[stat]; } }
+            for (const stat in gear.stats_minus) { if (stats.hasOwnProperty(stat)) { totalPenalties[stat] += gear.stats_minus[stat]; } }
         });
 
         if (!hasNullifier) {
-            for (const stat in totalPenalties) {
-                if (stats.hasOwnProperty(stat)) {
-                    stats[stat] -= totalPenalties[stat];
-                }
-            }
+            for (const stat in totalPenalties) { if (stats.hasOwnProperty(stat)) { stats[stat] -= totalPenalties[stat]; } }
         }
         
-        // NEW: Apply temporary buffs/debuffs from statusEffects array
         this.statusEffects.forEach(effect => {
             if (effect.name === 'ATK_Buff') stats.atk += effect.amount;
             if (effect.name === 'DEF_Buff') stats.def += effect.amount;
             if (effect.name === 'AGL_Debuff') stats.agl -= effect.amount;
-            // Add other effects like Stun, Blind, etc. here
-            if (effect.name === 'Stun') stats.agl = 0; // Stunned units are last in turn order
+            if (effect.name === 'Stun') stats.agl = 0;
         });
         
         return stats;
     }
 
+    // NEW: Function to check if a unit is currently grounded
+    isGrounded() {
+        return this.statusEffects.some(e => e.name === 'Gravity');
+    }
+
+    // NEW: Function to calculate hit chance based on attack accuracy and caps
+    calculateHitChance(attackAccuracy) {
+        if (attackAccuracy === 100) return 100; // Guaranteed success
+
+        let effectiveAccuracy = attackAccuracy;
+        // In a real battle, you would factor in evasion buffs/debuffs here.
+        // For now, assume base 95% is the standard (unless overridden by move JSON).
+
+        // Enforce the general cap (98%)
+        if (effectiveAccuracy > 98) effectiveAccuracy = 98;
+
+        // Enforce the "game changer" cap (50%) if the base accuracy was 20%
+        // We assume any move starting at 20% base accuracy is a "game changer"
+        if (attackAccuracy === 20 && effectiveAccuracy > 50) effectiveAccuracy = 50;
+
+        return effectiveAccuracy;
+    }
+
+
     getDamageAgainst(target) {
         const effectiveStats = this.getEffectiveStats(); 
         let multiplier = 1.0;
-        if (this.rarity === "Ultimate") { multiplier = 2.0; } 
-        else if (CONFIG.CHART[this.type] && CONFIG.CHART[this.type][target.type] !== undefined) {
+
+        // CRITICAL CHANGE: Check for 'Grounded' effect before applying type chart
+        let attackerType = this.type;
+        let targetType = target.type;
+
+        // Flying units hit by 'Gravity' lose their ground immunity
+        if (targetType === 'Flying' && target.isGrounded()) {
+            if (attackerType === 'Ground') {
+                 // Remove immunity (0.0 multiplier becomes 1.0 or 2.0 depending on chart)
+                 multiplier = CONFIG.CHART[attackerType][targetType] || 1.0; 
+            }
+        } else if (CONFIG.CHART[this.type] && CONFIG.CHART[this.type][target.type] !== undefined) {
             multiplier = CONFIG.CHART[this.type][target.type];
         }
+        
+        if (this.rarity === "Ultimate") { multiplier = 2.0; } 
+        
         let equipmentAtk = effectiveStats.atk;
         return Math.floor(equipmentAtk * multiplier);
     }
@@ -129,11 +144,7 @@ class Unit {
 
 class GameEngine {
     constructor() {
-        this.team = [];
-        this.credits = 0;
-        this.diffIndex = 3;
-        this.currentLanguage = 'en';
-        this.unlockedUnits = []; 
+        this.team = []; this.credits = 0; this.diffIndex = 3; this.currentLanguage = 'en'; this.unlockedUnits = []; 
         this.playerGears = [
             { id: "GEAR_HP_01", name: "HP Module I", type: "Normal", width: 1, height: 1, stats_plus: { "hp": 100, "mp": 0, "atk": 0, "def": 0, "agl": 0 }, stats_minus: { "hp": 0, "mp": 0, "atk": 0, "def": 0, "agl": 0 } },
             { id: "GEAR_ATK_01", name: "ATK Module I", type: "Fighting", width: 1, height: 1, stats_plus: { "hp": 0, "mp": 0, "atk": 20, "def": 0, "agl": 0 }, stats_minus: { "hp": 0, "mp": 0, "atk": 0, "def": 0, "agl": 0 } },
@@ -145,103 +156,60 @@ class GameEngine {
     toggleLanguage() { this.currentLanguage = (this.currentLanguage === 'en') ? 'jp' : 'en'; this.updateUI(); }
     unlockSecretUnit(unitID) {
         if (!this.unlockedUnits.includes(unitID)) {
-            this.unlockedUnits.push(unitID);
-            alert(`You defeated the Secret Unit! ${unitID} is now available for recruitment!`);
-            this.updateUI(); 
+            this.unlockedUnits.push(unitID); alert(`You defeated the Secret Unit! ${unitID} is now available for recruitment!`); this.updateUI(); 
         }
     }
     async recruitUnitFromFile(fileName) {
         try {
-            const response = await fetch(`./units/${fileName}`);
-            if (!response.ok) throw new Error('Network response was not ok');
+            const response = await fetch(`./units/${fileName}`); if (!response.ok) throw new Error('Network response was not ok');
             const unitData = await response.json();
             const SECRET_IDS = ["EXT-RM-001", "EXT-RM-002", "EXT-RM-003", "EXT-RM-004", "EXT-RM-005", "EXT-RM-006"];
-            if (SECRET_IDS.includes(unitData.id) && !this.unlockedUnits.includes(unitData.id)) {
-                 alert("This is a Secret Unit! You must defeat them in a random encounter first!");
-                 return;
-            }
-            if (this.team.length >= 5 && this.credits <= 0) {
-                alert("6th unit or later requires Credits!");
-                return;
-            }
-            if (this.team.length >= 5) this.credits--;
-            this.team.push(new Unit(unitData.name, unitData.type, unitData)); 
-            this.updateUI();
-        } catch (error) {
-            console.error("Failed to load unit from file:", error);
-            alert("Could not load unit file. Make sure you are running on a local server!");
-        }
+            if (SECRET_IDS.includes(unitData.id) && !this.unlockedUnits.includes(unitData.id)) { alert("This is a Secret Unit! You must defeat them in a random encounter first!"); return; }
+            if (this.team.length >= 5 && this.credits <= 0) { alert("6th unit or later requires Credits!"); return; }
+            if (this.team.length >= 5) this.credits--; this.team.push(new Unit(unitData.name, unitData.type, unitData)); this.updateUI();
+        } catch (error) { console.error("Failed to load unit from file:", error); alert("Could not load unit file. Make sure you are running on a local server!"); }
+    }
+    checkUpgradeCost(unitType, currentRarity) {
+        // ... (Material logic placeholder) ...
+        console.log(`To upgrade a ${unitType} unit from ${currentRarity} rarity, you need the following material: Cluster.`);
+        alert(`Upgrade logic needs material inventory management implemented first! Check console for required material.`);
+        return false; 
     }
     upgradeTeam() {
-        this.team.forEach(u => {
-            u.baseHp += 200; u.baseAtk += 50; u.baseDef += 30; u.baseAgl += 20; 
-            let rIdx = CONFIG.RARITIES.indexOf(u.rarity);
-            if (rIdx < CONFIG.RARITIES.length - 1) {
-                u.rarity = CONFIG.RARITIES[rIdx + 1];
-            }
-        });
+        this.team.forEach(u => { /* ... (Upgrade logic removed until materials added) ... */ });
         this.updateUI();
     }
     openGearEquipUI(unitIndex) {
-        const unit = this.team[unitIndex];
-        const gridSize = CONFIG.GEAR_GRID_SIZES[unit.rarity];
-        if (!gridSize) {
-            alert("This unit rarity does not have a defined gear grid size!");
-            return;
-        }
-        console.log(`Open Gear Equip UI for ${unit.name}`);
-        console.log(`Grid Size: ${gridSize.width}x${gridSize.height}`);
-        console.log("Equipped Gears:", unit.equippedGears);
-        console.log("Player Owned Gears:", this.playerGears);
-        // NEW: Example of applying a buff for testing purposes
-        unit.applyEffect('ATK_Buff', 3, 50); // Apply +50 ATK buff for 3 turns
-        this.updateUI(); // Update UI to reflect new temporary stats
-        alert(`Check the console. Gear UI logic has been added to 'game.js'. A temporary ATK buff has been applied for testing!`);
+        const unit = this.team[unitIndex]; const gridSize = CONFIG.GEAR_GRID_SIZES[unit.rarity];
+        if (!gridSize) { alert("This unit rarity does not have a defined gear grid size!"); return; }
+        // NEW: Example of applying a debuff for testing the "Grounded" mechanic
+        unit.applyEffect('Gravity', 3); 
+        console.log("Applied 'Gravity' debuff for testing. Unit is now grounded.");
+        this.updateUI(); 
+        alert(`Check the console. Gear UI logic added to 'game.js'. 'Gravity' debuff applied for testing!`);
     }
-    equipItem(idx) {
-        this.openGearEquipUI(idx);
-    }
+    equipItem(idx) { this.openGearEquipUI(idx); }
     updateUI() {
-        const field = document.getElementById('battlefield');
-        field.innerHTML = '';
+        const field = document.getElementById('battlefield'); field.innerHTML = '';
         this.team.forEach((u, index) => {
-            const isUlt = u.rarity === "Ultimate";
-            const card = document.createElement('div');
-            card.className = `card ${isUlt ? 'rarity-ultimate' : ''}`;
-            card.style.backgroundColor = isUlt ? '' : `var(--${u.type})`;
-            const passiveText = (this.currentLanguage === 'jp') ? u.jp_passive : u.en_passive;
-            const effectiveStats = u.getEffectiveStats();
-            
-            // NEW: Display active status effects in the UI
+            const isUlt = u.rarity === "Ultimate"; const card = document.createElement('div'); card.className = `card ${isUlt ? 'rarity-ultimate' : ''}`; card.style.backgroundColor = isUlt ? '' : `var(--${u.type})`;
+            const passiveText = (this.currentLanguage === 'jp') ? u.jp_passive : u.en_passive; const effectiveStats = u.getEffectiveStats();
             const effectsList = u.statusEffects.map(e => `${e.name} (${e.duration} turns left)`).join(', ');
-
             card.innerHTML = `
-                <strong>${(this.currentLanguage === 'jp') ? u.jp_name : u.name}</strong><br>
-                <small>${u.rarity} | ${u.type}</small>
-                <div class="stat-bar">
-                    HP: ${effectiveStats.hp} | ATK: ${effectiveStats.atk}<br>
-                    DEF: ${effectiveStats.def} | AGL: ${effectiveStats.agl}<br>
-                    <i>Passive: ${passiveText || 'N/A'}</i>
-                    ${effectsList ? `<br><i>Effects: ${effectsList}</i>` : ''} 
-                </div>
+                <strong>${(this.currentLanguage === 'jp') ? u.jp_name : u.name}</strong><br><small>${u.rarity} | ${u.type}</small>
+                <div class="stat-bar"> HP: ${effectiveStats.hp} | ATK: ${effectiveStats.atk}<br> DEF: ${effectiveStats.def} | AGL: ${effectiveStats.agl}<br>
+                    <i>Passive: ${passiveText || 'N/A'}</i> ${effectsList ? `<br><i>Effects: ${effectsList}</i>` : ''} </div>
                 <button onclick="game.openGearEquipUI(${index})" style="font-size:10px; margin-top:5px;">Equip Gear</button>
             `;
             field.appendChild(card);
         });
-        document.getElementById('credit-count').innerText = this.credits;
-        document.getElementById('difficulty-text').innerText = CONFIG.DIFFICULTIES[this.diffIndex];
+        document.getElementById('credit-count').innerText = this.credits; document.getElementById('difficulty-text').innerText = CONFIG.DIFFICULTIES[this.diffIndex];
         const secretUnits = {'EXT-RM-001': 'btn-hunter', 'EXT-RM-002': 'btn-shinobi', 'EXT-RM-003': 'btn-strength-shinobi','EXT-RM-004': 'btn-speedy-shinobi', 'EXT-RM-005': 'btn-technical-shinobi', 'EXT-RM-006': 'btn-heavy-shinobi'};
         for (const unitId in secretUnits) {
-            const buttonId = secretUnits[unitId];
-            const button = document.getElementById(buttonId);
+            const buttonId = secretUnits[unitId]; const button = document.getElementById(buttonId);
             if (button) {
-                if (this.unlockedUnits.includes(unitId)) {
-                    button.disabled = false; button.style.backgroundColor = 'green';
-                    button.innerText = button.innerText.replace(' (Locked)', '').replace(' (Locked)', '');
-                } else {
-                    button.disabled = true; button.style.backgroundColor = 'red';
-                    if (!button.innerText.includes('(Locked)')) { button.innerText += ' (Locked)'; }
-                }
+                if (this.unlockedUnits.includes(unitId)) { button.disabled = false; button.style.backgroundColor = 'green'; button.innerText = button.innerText.replace(' (Locked)', '').replace(' (Locked)', ''); } 
+                else { button.disabled = true; button.style.backgroundColor = 'red'; if (!button.innerText.includes('(Locked)')) { button.innerText += ' (Locked)'; } }
             }
         }
     }
@@ -254,12 +222,7 @@ function testUnlockStrengthShinobi() { game.unlockSecretUnit("EXT-RM-003"); }
 function testUnlockSpeedyShinobi() { game.unlockSecretUnit("EXT-RM-004"); }
 function testUnlockTechnicalShinobi() { game.unlockSecretUnit("EXT-RM-005"); }
 function testUnlockHeavyShinobi() { game.unlockSecretUnit("EXT-RM-006"); }
-function changeDifficulty() {
-    game.diffIndex = (game.diffIndex + 1) % CONFIG.DIFFICULTIES.length;
-    game.updateUI();
-}
-function saveGame() {
-    const data = JSON.stringify(game);
-    const blob = new Blob([data], {type: "application/json"});
-    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = "Ultimate_Battle_2026.json"; a.click();
-}
+function changeDifficulty() { game.diffIndex = (game.diffIndex + 1) % CONFIG.DIFFICULTIES.length; game.updateUI(); }
+function saveGame() { const data = JSON.stringify(game); const blob = new Blob([data], {type: "application/json"}); const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = "Ultimate_Battle_2026.json"; a.click(); }
+function startJackpotArenaTournament() { const currentDifficulty = CONFIG.DIFFICULTIES[game.diffIndex]; alert(`Jackpot Arena (Difficulty: ${currentDifficulty}) Initiated! Get ready for the 1v1 knockout tournament!`); console.log("Tournament started. Logic for elimination and jackpot reward needs implementation."); }
+function checkJackpotReward() { const currentJackpotMaterials = Math.floor(Math.random() * 5000) + 1000; console.log(`Congratulations! You won ${currentJackpotMaterials} materials!`); game.credits += 10; game.updateUI(); }
