@@ -1,0 +1,13 @@
+{
+  "id": "BION_ATK_LEWA",
+  "name": "Cyclone Slash",
+  "jp_name": "サイクロン・スラッシュ",
+  "mp_cost": 20,
+  "type": "Flying",
+  "power_multiplier": 1.4,
+  "accuracy": 95,
+  "effect": "damage",
+  "shadow": false,
+  "en_description": "A swift aerial strike delivered with the Air Katana.",
+  "jp_description": "エア・カタナによる素早い空中攻撃。"
+}
