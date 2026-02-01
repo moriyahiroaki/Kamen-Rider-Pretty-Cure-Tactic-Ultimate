@@ -113,21 +113,19 @@ class Unit {
 
     // NEW: Function to calculate hit chance based on attack accuracy and caps
     calculateHitChance(attackAccuracy) {
-        if (attackAccuracy === 100) return 100; // Guaranteed success
+    // Guaranteed Success: Ignores all debuffs and caps if base is 100
+    if (attackAccuracy === 100) return 100; 
 
-        let effectiveAccuracy = attackAccuracy;
-        // In a real battle, you would factor in evasion buffs/debuffs here.
-        // For now, assume base 95% is the standard (unless overridden by move JSON).
+    let effectiveAccuracy = attackAccuracy;
 
-        // Enforce the general cap (98%)
-        if (effectiveAccuracy > 98) effectiveAccuracy = 98;
+    // Enforce the general cap (98%) for all other moves
+    if (effectiveAccuracy > 98) effectiveAccuracy = 98;
 
-        // Enforce the "game changer" cap (50%) if the base accuracy was 20%
-        // We assume any move starting at 20% base accuracy is a "game changer"
-        if (attackAccuracy === 20 && effectiveAccuracy > 50) effectiveAccuracy = 50;
+    // Enforce the "Game Changer" cap (50%) for moves with 20% base
+    if (attackAccuracy === 20 && effectiveAccuracy > 50) effectiveAccuracy = 50;
 
-        return effectiveAccuracy;
-    }
+    return effectiveAccuracy;
+}
 
 
     getDamageAgainst(target) {
