@@ -1,15 +1,15 @@
 {
-  "id": "PC-ST-004",
+  "id": "PC_SOLEIL_001",
   "name": "Cure Soleil",
-  "jp_name": "キュアソレイユ",
+  "jp_name": "キュアソレイユ (天宮えれな)",
   "type": "Fire",
   "rarity": "Common",
-  "hp": 700,
-  "mp": 130,
+  "hp": 800,
+  "mp": 80,
   "atk": 90,
-  "def": 80,
-  "agl": 45,
-  "en_passive": "Sunlight Strength: Deals 1.2x damage during daytime battles.",
-  "jp_passive": "サンライトストレングス: 昼間のバトル中に与えるダメージが1.2倍になる。",
+  "def": 90,
+  "agl": 60,
+  "en_passive": "Burning Passion: High HP and DEF; fire attacks sometimes cause 'Burn' status.",
+  "jp_passive": "バーニングパッション: 高いHPとDEF。火炎攻撃が時々「やけど」状態を引き起こす。",
   "ui_color": "Red"
 }
