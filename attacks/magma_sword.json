@@ -1,0 +1,13 @@
+{
+  "id": "BION_ATK_TAHU",
+  "name": "Magma Sword Strike",
+  "jp_name": "マグマソード・ストライク",
+  "mp_cost": 25,
+  "type": "Fire",
+  "power_multiplier": 1.5,
+  "accuracy": 95,
+  "effect": "damage",
+  "shadow": false,
+  "en_description": "A burning blade strike that sears the enemy.",
+  "jp_description": "敵を焼き尽くす燃える刃の攻撃。"
+}
