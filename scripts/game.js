@@ -2,7 +2,7 @@ const CONFIG = {
     RARITIES: ["Common", "Uncommon", "Rare", "Very Rare", "Epic", "Heroic", "Legendary", "Mythical", "Ultimate"],
     DIFFICULTIES: ["Enjoy", "Casual", "Light", "Normal", "Hyper", "Extra", "Special", "Deluxe", "Hell", "Death"],
     TYPES: ["Normal", "Fire", "Water", "Electric", "Grass", "Ice", "Fighting", "Poison", "Ground", "Flying", "Psychic", "Bug", "Rock", "Ghost", "Dragon", "Dark", "Steel", "Fairy"],
-    CHART: { /* ... (full 18-type chart from previous response) ... */ 
+    CHART: { /* ... (full 18-type chart needs to be copied here from your notes if not present) ... */ 
         Normal:   { Rock: 0.5, Ghost: 0, Steel: 0.5 },
         Fire:     { Fire: 0.5, Water: 0.5, Grass: 2, Ice: 2, Bug: 2, Rock: 0.5, Dragon: 0.5, Steel: 2 },
         Water:    { Fire: 2, Water: 0.5, Grass: 0.5, Ground: 2, Rock: 2, Dragon: 0.5 },
@@ -21,6 +21,7 @@ const CONFIG = {
         Dark:     { Fighting: 0.5, Psychic: 2, Ghost: 2, Dark: 0.5, Fairy: 0.5 },
         Steel:    { Fire: 0.5, Water: 0.5, Electric: 0.5, Ice: 2, Rock: 2, Steel: 0.5, Fairy: 2 },
         Fairy:    { Fire: 0.5, Fighting: 2, Poison: 0.5, Dragon: 2, Dark: 2, Steel: 0.5 }
+    },
     GEAR_GRID_SIZES: {
         "Common": { width: 3, height: 3 }, "Uncommon": { width: 3, height: 4 }, "Rare": { width: 4, height: 4 }, 
         "Very Rare": { width: 4, height: 5 }, "Epic": { width: 5, height: 5 }, "Heroic": { width: 5, height: 6 }, 
@@ -32,10 +33,12 @@ const CONFIG = {
         Electric: 'Topaz', Psychic: 'Topaz', Fairy: 'Topaz',
         Normal: 'Diamond', Ice: 'Diamond', Steel: 'Diamond',
         Grass: 'Emerald', Flying: 'Emerald', Bug: 'Emerald',
-        Water: 'Sapphire', Fighting: 'Sapphire', Rock: 'Sapphire'
+        Water: 'Sapphire', Fighting: 'Sapphire', Rock: 'Sapphire',
+        Shadow: 'Onyx' // New mapping for future Shadow Type units
     },
-    UPGRADE_COST_CLUSTERS: 1 // Cost to upgrade one tier (e.g., Common->Uncommon)
+    UPGRADE_COST_CLUSTERS: 1 
 };
+
 class Accessory {
     constructor(name, type, rarity = "Common", atkBonus = 20) {
         this.name = name; this.type = type; this.rarity = rarity; this.atkBonus = atkBonus;
@@ -51,7 +54,6 @@ class Unit {
         this.en_passive = stats.en_passive; this.jp_passive = stats.jp_passive;
         this.statusEffects = [];
     }
-
     applyEffect(effectName, duration, amount = 0) {
         const existingEffect = this.statusEffects.find(e => e.name === effectName);
         if (existingEffect) {
@@ -158,6 +160,9 @@ class GameEngine {
             { id: "GEAR_DEF_01", name: "DEF Module I", type: "Steel", width: 1, height: 1, stats_plus: { "hp": 0, "mp": 0, "atk": 0, "def": 20, "agl": 0 }, stats_minus: { "hp": 0, "mp": 0, "atk": 0, "def": 0, "agl": 0 } },
             { id: "GEAR_HP_02_P_ATK", name: "HP Module II (Compact, -ATK)", type: "Normal", width: 1, height: 1, stats_plus: { "hp": 300, "mp": 0, "atk": 0, "def": 0, "agl": 0 }, stats_minus: { "hp": 0, "mp": 0, "atk": 10, "def": 0, "agl": 0 } }
         ];
+        this.materials = {
+            Ruby: 2, Amethyst: 0, Topaz: 0, Diamond: 2, Emerald: 0, Sapphire: 2, Onyx: 0
+        };
     }
     
     toggleLanguage() { this.currentLanguage = (this.currentLanguage === 'en') ? 'jp' : 'en'; this.updateUI(); }
@@ -209,6 +214,20 @@ class GameEngine {
         alert(`Check the console. Gear UI logic added to 'game.js'. 'Gravity' debuff applied for testing!`);
     }
     equipItem(idx) { this.openGearEquipUI(idx); }
+
+    // Placeholder function to apply the shadow side effect to both user and enemy
+    applyShadowSideEffect(userUnit, targetUnit) {
+        console.log(`Applying shadow side effect to ${userUnit.name} (user) and ${targetUnit.name} (target). Logic not yet implemented.`);
+    }
+    
+    // Function to handle the specific HP halving side effect of Shadow Boost
+    handleHpHalvingSideEffect(userUnit) {
+        const damage = Math.floor(userUnit.baseHp / 2);
+        userUnit.baseHp -= damage;
+        console.log(`${userUnit.name} used Shadow Boost and lost ${damage} HP!`);
+        userUnit.applyEffect('ATK_Buff', 3, 100);
+        userUnit.applyEffect('DEF_Buff', 3, 100); 
+    }
     updateUI() {
         const field = document.getElementById('battlefield'); field.innerHTML = '';
         this.team.forEach((u, index) => {
