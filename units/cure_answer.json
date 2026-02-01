@@ -1,0 +1,15 @@
+{
+  "id": "PC_ANSWER_001",
+  "name": "Cure Answer",
+  "jp_name": "キュアアンサー (明智あんな)",
+  "type": "Psychic",
+  "rarity": "Common",
+  "hp": 600,
+  "mp": 150,
+  "atk": 80,
+  "def": 70,
+  "agl": 100,
+  "en_passive": "Cure Answer's Passive: 'Gold-Star' detective abilities.",
+  "jp_passive": "キュアアンサーのパッシブ:「はなまる!」探偵能力。",
+  "ui_color": "Coral"
+}
