@@ -1,7 +1,7 @@
 {
   "id": "ATK_SHADOW_BASIC",
   "name": "Shadow Attack",
-  "jp_name": "シャドーアタック",
+  "jp_name": "シャドウ・アタック",
   "mp_cost": 0,
   "type": "Normal",
   "power_multiplier": 1.0,
@@ -9,5 +9,5 @@
   "effect": "damage_shadow_dual_side_effect",
   "shadow": true,
   "en_description": "A standard Normal type shadow attack. May cause negative side effects to both the user and the enemy.",
-  "jp_description": "標準的なノーマルタイプシャドーアタック。使用者と敵の両方に負の副作用を引き起こす可能性がある。"
+  "jp_description": "標準的なノーマルタイプシャドウアタック。使用者と敵の両方に負の副作用を引き起こす可能性がある。"
 }
