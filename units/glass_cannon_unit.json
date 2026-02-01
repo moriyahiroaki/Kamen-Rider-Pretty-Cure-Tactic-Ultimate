@@ -1,0 +1,16 @@
+{
+  "id": "UNIT_GLASS_CANNON_01",
+  "name": "Glass Cannon Unit",
+  "jp_name": "ガラスキャノンユニット",
+  "type": "Fighting",
+  "rarity": "Uncommon",
+  "hp": 700,
+  "mp": 100,
+  "atk": 150,
+  "def": 40,
+  "agl": 130,
+  "en_passive": "Fragile Frame: DEF is permanently halved during battle.",
+  "jp_passive": "脆いフレーム: 戦闘中、防御力が永続的に半分になる。",
+  "passive_effect_id": "PASSIVE_DEF_HALVED",
+  "ui_color": "Orange"
+}
