@@ -1,0 +1,12 @@
+{
+  "id": "SHADOW_FREEZE_MMBN",
+  "name": "Shadow Freeze",
+  "jp_name": "シャドウ・フリーズ",
+  "mp_cost": 75,
+  "type": "Ice",
+  "power_multiplier": 4.0,
+  "accuracy": 95,
+  "shadow": true,
+  "en_description": "Forbidden Cold. Halves HP and causes turn skipping. Doubles enemy MP costs.",
+  "jp_description": "禁断の冷気。使用者のHPを半分にし、定期的に行動不能にする。敵の消費MPを倍にする。"
+}
