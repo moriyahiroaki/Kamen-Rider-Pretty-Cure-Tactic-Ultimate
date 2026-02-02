@@ -328,3 +328,84 @@ function checkJackpotReward() {
     game.updateUI();
 }
 function checkJackpotReward() { const currentJackpotMaterials = Math.floor(Math.random() * 5000) + 1000; console.log(`Congratulations! You won ${currentJackpotMaterials} materials!`); game.credits += 10; game.updateUI(); }
+applyShadowCombatEffects(attacker, target, attack) {
+    if (!attack.shadow) return;
+
+    // 1. HP Halving (Always happens)
+    attacker.hp = Math.floor(attacker.hp / 2);
+
+    // 2. Battle-Only Downsides
+    function applyShadowCombatEffects(attacker, target, attack) {
+    if (!attack.shadow) return;
+
+    // BASE PRICE: MMBN Rule - Halve current HP
+    attacker.hp = Math.floor(attacker.hp / 2);
+
+    switch(attack.id) {
+        case "SHADOW_HYDRO_MMBN":
+            attacker.battleAgl = 1; // User Speed crushed
+            target.evadeChance = 0; // Enemy can't hide
+            alert("Shadow Hydro: User's circulation frozen! AGL reduced to 1 for this battle!");
+            break;
+
+        case "SHADOW_FLARE_MMBN":
+            attacker.addStatus("RECOIL_MELTDOWN"); // Self-damage every turn
+            target.def = Math.floor(target.def * 0.7); // Melt enemy armor
+            alert("Shadow Flare: User is melting down! Recoil damage active for this battle!");
+            break;
+
+        case "SHADOW_LEAF_MMBN":
+            attacker.canHeal = false; // Healing disabled
+            let stolenMP = Math.floor(target.mp * 0.15);
+            target.mp -= stolenMP;
+            attacker.mp += stolenMP;
+            alert("Shadow Leaf: User's roots are cursed! Healing disabled for this battle!");
+            break;
+
+        case "SHADOW_LASER_MMBN":
+            attacker.battleDef = (attacker.battleDef || attacker.def) * 0.5;
+            target.accuracyMod = 0.7;
+            alert("Shadow Laser: User's defense shattered for this battle!");
+            break;
+
+        case "SHADOW_METEOR_MMBN":
+            attacker.battleMaxMp = (attacker.battleMaxMp || attacker.maxMp) - 50;
+            if (attacker.mp > attacker.battleMaxMp) attacker.mp = attacker.battleMaxMp;
+            target.isGrounded = true;
+            target.agl *= 0.5;
+            alert("Shadow Meteor: User's MP capacity crushed for this battle!");
+            break;
+
+        case "SHADOW_QUAKE_MMBN":
+            attacker.isGrounded = true; // User loses flying
+            target.canGuard = false; // Enemy cannot defend/evade
+            alert("Shadow Quake: User is grounded! Enemy cannot use Defend or Evade!");
+            break;
+
+        case "SHADOW_FREEZE_MMBN":
+            attacker.frostbite = true; // Skip turns
+            target.mpCostMult = 2; // Enemy MP costs double
+            alert("Shadow Freeze: User is shivering! Enemy MP costs are doubled!");
+            break;
+
+        case "SHADOW_TEMPEST_MMBN":
+            attacker.rockWeakness = true; // Takes 2x from Rock
+            target.forceSwitch = true; // Force enemy to swap
+            alert("Shadow Tempest: User is vulnerable to Rock! The enemy was blown away!");
+            break;
+    }
+    
+    // Remember to clear frostbite, battleDef, battleAgl, etc., in endBattle()!
+}
+    function endBattleCleanup(party) {
+    party.forEach(unit => {
+        unit.battleDef = unit.def;
+        unit.battleAgl = unit.agl;
+        unit.battleMaxMp = unit.maxMp;
+        unit.canHeal = true;
+        unit.isGrounded = false;
+        unit.frostbite = false;
+        unit.rockWeakness = false;
+        // MP and HP stay where they are, but Max capacity returns to normal
+    });
+}
