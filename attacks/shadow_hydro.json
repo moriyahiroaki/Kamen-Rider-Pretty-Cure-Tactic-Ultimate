@@ -1,0 +1,12 @@
+{
+  "id": "SHADOW_HYDRO_MMBN",
+  "name": "Shadow Hydro",
+  "jp_name": "シャドウ・ハイドロ",
+  "mp_cost": 70,
+  "type": "Water",
+  "power_multiplier": 4.0,
+  "accuracy": 95,
+  "shadow": true,
+  "en_description": "Forbidden Water. Halves HP and freezes circulation (AGL 1). Enemy loses evasion.",
+  "jp_description": "禁断の激流。使用者のHPを半分にし、AGLを1にする。敵は回避不能になる。"
+}
