@@ -1,0 +1,12 @@
+{
+  "id": "SHADOW_LASER_MMBN",
+  "name": "Shadow Laser",
+  "jp_name": "シャドウ・レーザー",
+  "mp_cost": 75,
+  "type": "Fairy",
+  "power_multiplier": 4.2,
+  "accuracy": 100,
+  "shadow": true,
+  "en_description": "Forbidden Light. Halves HP and shatters DEF for the battle. Blinds the enemy.",
+  "jp_description": "禁断の光。使用者のHPを半分にし、この戦闘のDEFを半減させる。敵を盲目にする。"
+}
