@@ -1,0 +1,12 @@
+{
+  "id": "SHADOW_LIGHTNING_MMBN",
+  "name": "Shadow Lightning",
+  "jp_name": "シャドウ・ライトニング",
+  "mp_cost": 75,
+  "type": "Electric",
+  "power_multiplier": 4.2,
+  "accuracy": 95,
+  "shadow": true,
+  "en_description": "Forbidden Bolt. Halves HP and causes self-recoil on every move. Paralyzes and slows the enemy.",
+  "jp_description": "禁断の電光。使用者のHPを半分にし、行動する度に反動を受ける。敵を麻痺させ、AGLを下げる。"
+}
