@@ -1,0 +1,12 @@
+{
+  "id": "SHADOW_PSYCHO_MMBN",
+  "name": "Shadow Psycho",
+  "jp_name": "シャドウ・サイコ",
+  "mp_cost": 85,
+  "type": "Psychic",
+  "power_multiplier": 4.8,
+  "accuracy": 90,
+  "shadow": true,
+  "en_description": "Forbidden Mind. Halves HP and shatters Accuracy. Drains enemy MP and weakens Magic DEF.",
+  "jp_description": "禁断の念力。使用者のHPを半分にし、命中率を大幅に下げる。敵のMPを毎ターン削り、魔法耐性を下げる。"
+}
