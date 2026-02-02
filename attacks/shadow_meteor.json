@@ -1,0 +1,12 @@
+{
+  "id": "SHADOW_METEOR_MMBN",
+  "name": "Shadow Meteor",
+  "jp_name": "シャドウ・メテオ",
+  "mp_cost": 90,
+  "type": "Rock",
+  "power_multiplier": 5.0,
+  "accuracy": 90,
+  "shadow": true,
+  "en_description": "Forbidden Comet. Halves HP and crushes MP capacity. Drastically slows enemy.",
+  "jp_description": "禁断の流星。使用者のHPを半分にし、MP容量を削る。敵の速度を大幅に下げる。"
+}
