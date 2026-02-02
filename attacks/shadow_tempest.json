@@ -1,0 +1,12 @@
+{
+  "id": "SHADOW_TEMPEST_MMBN",
+  "name": "Shadow Tempest",
+  "jp_name": "シャドウ・テンペスト",
+  "mp_cost": 75,
+  "type": "Flying",
+  "power_multiplier": 4.2,
+  "accuracy": 95,
+  "shadow": true,
+  "en_description": "Forbidden Wind. Halves HP and creates Rock vulnerability. Forces enemy switch-out.",
+  "jp_description": "禁断の嵐。使用者のHPを半分にし、岩弱点を作る。敵を強制的に交代させる。"
+}
