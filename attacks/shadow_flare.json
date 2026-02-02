@@ -1,0 +1,12 @@
+{
+  "id": "SHADOW_FLARE_MMBN",
+  "name": "Shadow Flare",
+  "jp_name": "シャドウ・フレア",
+  "mp_cost": 70,
+  "type": "Fire",
+  "power_multiplier": 4.0,
+  "accuracy": 95,
+  "shadow": true,
+  "en_description": "Dark Flare. Halves HP and causes turnly recoil damage. Melts enemy DEF.",
+  "jp_description": "暗黒のフレア。使用者のHPを半分にし、毎ターン反動を受ける。敵のDEFを下げる。"
+}
