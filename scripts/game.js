@@ -393,6 +393,20 @@ applyShadowCombatEffects(attacker, target, attack) {
             target.forceSwitch = true; // Force enemy to swap
             alert("Shadow Tempest: User is vulnerable to Rock! The enemy was blown away!");
             break;
+            
+        case "SHADOW_LIGHTNING_MMBN":
+            attacker.addStatus("SHORT_CIRCUIT"); // Recoil on every action
+            target.aglMod = 0.6;
+            target.paralyzed = true;
+            alert("Shadow Lightning: User's circuits are fried! Recoil damage active. Enemy is paralyzed!");
+            break;
+
+        case "SHADOW_PSYCHO_MMBN":
+            attacker.battleAcc = 50; // Heavy Accuracy drop
+            target.mpLeak = true;
+            target.magDefMod = 0.5;
+            alert("Shadow Psycho: User's mind is fractured! Accuracy plummeted! Enemy mind is leaking!");
+            break;
     }
     
     // Remember to clear frostbite, battleDef, battleAgl, etc., in endBattle()!
