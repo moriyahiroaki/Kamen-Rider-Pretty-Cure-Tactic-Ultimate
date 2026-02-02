@@ -1,0 +1,12 @@
+{
+  "id": "SHADOW_LEAF_MMBN",
+  "name": "Shadow Leaf",
+  "jp_name": "シャドウ・リーフ",
+  "mp_cost": 70,
+  "type": "Grass",
+  "power_multiplier": 4.0,
+  "accuracy": 95,
+  "shadow": true,
+  "en_description": "Cursed Leaves. Halves HP and prevents healing. Drains enemy MP.",
+  "jp_description": "呪われた葉。使用者のHPを半分にし、回復を封じる。敵のMPを吸収する。"
+}
