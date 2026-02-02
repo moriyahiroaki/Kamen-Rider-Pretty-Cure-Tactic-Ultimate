@@ -1,0 +1,12 @@
+{
+  "id": "SHADOW_QUAKE_MMBN",
+  "name": "Shadow Quake",
+  "jp_name": "シャドウ・クエイク",
+  "mp_cost": 80,
+  "type": "Ground",
+  "power_multiplier": 4.5,
+  "accuracy": 95,
+  "shadow": true,
+  "en_description": "Forbidden Earth. Halves HP and grounds user. Enemy cannot use Defend or Evade.",
+  "jp_description": "禁断の大地。使用者のHPを半分にし、地上に固定する。敵は防御や回避ができなくなる。"
+}
