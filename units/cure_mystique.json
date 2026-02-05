@@ -1,0 +1,15 @@
+{
+  "id": "PC_MYSTIQUE_001",
+  "name": "Cure Mystique",
+  "jp_name": "キュアミスティック (小林みくる)",
+  "type": "Psychic",
+  "rarity": "Common",
+  "hp": 700,
+  "mp": 120,
+  "atk": 80,
+  "def": 85,
+  "agl": 75,
+  "en_passive": "Layered Reasoning: Increases MP regeneration and DEF during combat.",
+  "jp_passive": "レイヤードリーズニング: 戦闘中、MP自動回復と防御力が増加する。",
+  "ui_color": "Purple"
+}
