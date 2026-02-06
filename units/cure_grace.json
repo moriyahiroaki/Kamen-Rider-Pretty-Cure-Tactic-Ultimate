@@ -1,0 +1,15 @@
+{
+  "id": "PC_GRACE_001",
+  "name": "Cure Grace",
+  "jp_name": "キュアグレース (花寺のどか)",
+  "type": "Grass",
+  "rarity": "Common",
+  "hp": 750,
+  "mp": 100,
+  "atk": 70,
+  "def": 80,
+  "agl": 70,
+  "en_passive": "Heart of a Flower: Moderate HP regeneration every turn. Immune to Poison status.",
+  "jp_passive": "花の心: 毎ターン中程度のHP回復。毒状態無効。",
+  "ui_color": "Green"
+}
