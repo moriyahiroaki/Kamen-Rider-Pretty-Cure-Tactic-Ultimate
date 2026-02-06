@@ -1,0 +1,15 @@
+{
+  "id": "PC_KYUN_KYUN_001",
+  "name": "Cure Kyun-Kyun",
+  "jp_name": "キュアキュンキュン (時雨こころ)",
+  "type": "Ghost",
+  "rarity": "Common",
+  "hp": 700,
+  "mp": 120,
+  "atk": 90,
+  "def": 80,
+  "agl": 90,
+  "en_passive": "Raining Heart: Chance to stun opponent with every basic attack.",
+  "jp_passive": "レイニングハート: 全ての基本攻撃で対戦相手を気絶（スタン）させるチャンスがある。",
+  "ui_color": "Purple"
+}
