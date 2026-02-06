@@ -1,0 +1,15 @@
+{
+  "id": "RM_MEDIC_001",
+  "name": "Medic Roidmude",
+  "jp_name": "メディックロイミュード",
+  "type": "Psychic",
+  "rarity": "Common",
+  "hp": 900,
+  "mp": 400,
+  "atk": 70,
+  "def": 100,
+  "agl": 110,
+  "en_passive": "Healing Touch: Heals adjacent allies every turn.",
+  "jp_passive": "ヒーリングタッチ: 毎ターン、隣接する味方を回復する。",
+  "ui_color": "Coral"
+}
