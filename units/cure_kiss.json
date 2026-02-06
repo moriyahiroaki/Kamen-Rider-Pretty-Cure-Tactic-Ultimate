@@ -1,0 +1,15 @@
+{
+  "id": "PC_KISS_001",
+  "name": "Cure Kiss",
+  "jp_name": "キュアキス (田中めろん)",
+  "type": "Fairy",
+  "rarity": "Common",
+  "hp": 700,
+  "mp": 130,
+  "atk": 80,
+  "def": 70,
+  "agl": 120,
+  "en_passive": "Melon Kiss: Healing passive ability, restores a small amount of HP every turn.",
+  "jp_passive": "メロンキス: 回復パッシブ能力、毎ターン少量のHPを回復する。",
+  "ui_color": "Pink"
+}
