@@ -1,0 +1,15 @@
+{
+  "id": "PC_FONTAINE_001",
+  "name": "Cure Fontaine",
+  "jp_name": "キュアフォンテーヌ (沢泉ちゆ)",
+  "type": "Water",
+  "rarity": "Common",
+  "hp": 700,
+  "mp": 120,
+  "atk": 75,
+  "def": 90,
+  "agl": 80,
+  "en_passive": "Flowing Water: High defense, resistant to Fire-type attacks.",
+  "jp_passive": "流れる水: 高い防御力、炎タイプ攻撃に耐性がある。",
+  "ui_color": "Blue"
+}
