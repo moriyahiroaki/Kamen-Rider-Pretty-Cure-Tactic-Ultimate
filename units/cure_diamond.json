@@ -1,0 +1,15 @@
+{
+  "id": "PC_DIAMOND_001",
+  "name": "Cure Diamond",
+  "jp_name": "キュアダイヤモンド (菱川六花)",
+  "type": "Ice",
+  "rarity": "Common",
+  "hp": 650,
+  "mp": 180,
+  "atk": 70,
+  "def": 90,
+  "agl": 85,
+  "en_passive": "Diamond Brilliance: Boosts DEF of adjacent allies by 10%.",
+  "jp_passive": "ダイヤモンドブリリアンス: 隣接する味方の防御力を10%増加させる。",
+  "ui_color": "Light Blue"
+}
