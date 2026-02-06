@@ -1,0 +1,15 @@
+{
+  "id": "PC_HEART_001",
+  "name": "Cure Heart",
+  "jp_name": "キュアハート (相田マナ)",
+  "type": "Fighting",
+  "rarity": "Common",
+  "hp": 700,
+  "mp": 100,
+  "atk": 80,
+  "def": 80,
+  "agl": 70,
+  "en_passive": "Heartfelt Action: High chance to ignore status effects like Stun or Poison.",
+  "jp_passive": "ハートフェルトアクション: スタンや毒などの状態異常を無視する確率が高い。",
+  "ui_color": "Red"
+}
