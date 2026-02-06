@@ -1,0 +1,15 @@
+{
+  "id": "PC_MYSTERY_001",
+  "name": "Cure Mystery",
+  "jp_name": "キュアミステリー (小野塚はる)",
+  "type": "Ghost",
+  "rarity": "Common",
+  "hp": 700,
+  "mp": 120,
+  "atk": 80,
+  "def": 85,
+  "agl": 75,
+  "en_passive": "Mind Reader: Can predict opponent's next move, slightly increasing evasion chance.",
+  "jp_passive": "マインドリーダー: 相手の次の動きを予測し、回避率をわずかに高める。",
+  "ui_color": "Purple"
+}
