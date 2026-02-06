@@ -1,0 +1,15 @@
+{
+  "id": "PC_IDOL_001",
+  "name": "Cure Idol",
+  "jp_name": "キュアアイドル (咲良うた)",
+  "type": "Normal",
+  "rarity": "Common",
+  "hp": 650,
+  "mp": 150,
+  "atk": 80,
+  "def": 70,
+  "agl": 100,
+  "en_passive": "Center Stage: Deals slightly more damage when she is the only unit remaining on the field.",
+  "jp_passive": "センターステージ: フィールドに残っている唯一のユニットである場合、与えるダメージがわずかに増加する。",
+  "ui_color": "White"
+}
