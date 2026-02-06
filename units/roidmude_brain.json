@@ -1,0 +1,15 @@
+{
+  "id": "RM_BRAIN_001",
+  "name": "Brain Roidmude",
+  "jp_name": "ブレンロイミュード",
+  "type": "Poison",
+  "rarity": "Common",
+  "hp": 800,
+  "mp": 300,
+  "atk": 80,
+  "def": 90,
+  "agl": 90,
+  "en_passive": "Brainiac: Status effects applied by this unit last 2 turns longer.",
+  "jp_passive": "ブレインアック: このユニットが適用する状態異常は2ターン長く持続する。",
+  "ui_color": "Violet"
+}
