@@ -1,0 +1,15 @@
+{
+  "id": "PC_SWORD_001",
+  "name": "Cure Sword",
+  "jp_name": "キュアソード (剣崎真琴)",
+  "type": "Dark",
+  "rarity": "Common",
+  "hp": 680,
+  "mp": 140,
+  "atk": 110,
+  "def": 70,
+  "agl": 100,
+  "en_passive": "Spade Purity: Highly effective against Ghost and Psychic type units.",
+  "jp_passive": "スペードピュリティ: ゴーストタイプおよびエスパータイプユニットに非常に効果的。",
+  "ui_color": "Black"
+}
