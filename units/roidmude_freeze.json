@@ -1,0 +1,15 @@
+{
+  "id": "RM_FREEZE_001",
+  "name": "Freeze Roidmude",
+  "jp_name": "フリーズロイミュード",
+  "type": "Ice",
+  "rarity": "Common",
+  "hp": 1100,
+  "mp": 300,
+  "atk": 120,
+  "def": 110,
+  "agl": 120,
+  "en_passive": "Global Freeze: Can apply 'Stun' status to multiple targets simultaneously.",
+  "jp_passive": "グローバルフリーズ: 複数のターゲットに同時に「スタン」状態を適用できる。",
+  "ui_color": "Light Blue"
+}
