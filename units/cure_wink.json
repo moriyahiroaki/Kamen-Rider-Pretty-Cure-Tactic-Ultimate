@@ -1,0 +1,15 @@
+{
+  "id": "PC_WINK_001",
+  "name": "Cure Wink",
+  "jp_name": "キュアウインク (蒼風なな)",
+  "type": "Water",
+  "rarity": "Common",
+  "hp": 600,
+  "mp": 180,
+  "atk": 70,
+  "def": 90,
+  "agl": 110,
+  "en_passive": "Strong Winds: High evasion rate against Flying-type attacks.",
+  "jp_passive": "強風: ひこうタイプ攻撃に対する高い回避率。",
+  "ui_color": "Blue"
+}
