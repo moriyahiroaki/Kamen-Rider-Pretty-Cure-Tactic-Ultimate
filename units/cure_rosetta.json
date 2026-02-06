@@ -1,0 +1,15 @@
+{
+  "id": "PC_ROSETTA_001",
+  "name": "Cure Rosetta",
+  "jp_name": "キュアロゼッタ (四葉ありす)",
+  "type": "Grass",
+  "rarity": "Common",
+  "hp": 800,
+  "mp": 130,
+  "atk": 60,
+  "def": 110,
+  "agl": 60,
+  "en_passive": "Rosetta Wall: Possesses the highest base DEF in the game.",
+  "jp_passive": "ロゼッタウォール: ゲーム内で最高の基本防御力を持つ。",
+  "ui_color": "Green"
+}
