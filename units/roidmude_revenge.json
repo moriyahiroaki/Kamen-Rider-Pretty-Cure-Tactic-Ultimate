@@ -1,0 +1,15 @@
+{
+  "id": "RM_REVENGE_001",
+  "name": "Revenge Roidmude",
+  "jp_name": "リベンジロイミュード",
+  "type": "Dark",
+  "rarity": "Common",
+  "hp": 950,
+  "mp": 250,
+  "atk": 130,
+  "def": 90,
+  "agl": 100,
+  "en_passive": "Vengeance: Deals significantly more damage if an ally was defeated the previous turn.",
+  "jp_passive": "復讐: 前のターンに味方が倒された場合、与えるダメージが大幅に増加する。",
+  "ui_color": "Black"
+}
