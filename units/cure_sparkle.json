@@ -1,0 +1,15 @@
+{
+  "id": "PC_SPARKLE_001",
+  "name": "Cure Sparkle",
+  "jp_name": "キュアスパークル (平光ひなた)",
+  "type": "Electric",
+  "rarity": "Common",
+  "hp": 650,
+  "mp": 110,
+  "atk": 90,
+  "def": 60,
+  "agl": 110,
+  "en_passive": "Sparkling Energy: Increases critical hit chance and AGL.",
+  "jp_passive": "きらめくエネルギー: クリティカルヒットの確率と俊敏性が増加する。",
+  "ui_color": "Yellow"
+}
