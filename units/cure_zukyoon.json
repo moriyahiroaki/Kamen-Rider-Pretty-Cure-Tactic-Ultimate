@@ -1,0 +1,15 @@
+{
+  "id": "PC_ZUKYOON_001",
+  "name": "Cure Zukyoon",
+  "jp_name": "キュアズキーン (田中ぷりん)",
+  "type": "Fighting",
+  "rarity": "Common",
+  "hp": 800,
+  "mp": 100,
+  "atk": 110,
+  "def": 95,
+  "agl": 60,
+  "en_passive": "Managerial Instinct: High physical defense, resistant to fighting type attacks.",
+  "jp_passive": "管理本能: 高い物理防御力、かくとうタイプ攻撃に耐性がある。",
+  "ui_color": "Orange"
+}
