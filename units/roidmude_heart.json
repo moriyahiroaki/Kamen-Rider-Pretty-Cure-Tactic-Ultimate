@@ -1,0 +1,15 @@
+{
+  "id": "RM_HEART_001",
+  "name": "Heart Roidmude",
+  "jp_name": "ハートロイミュード",
+  "type": "Dark",
+  "rarity": "Common",
+  "hp": 1200,
+  "mp": 200,
+  "atk": 150,
+  "def": 120,
+  "agl": 100,
+  "en_passive": "Over Justice: Becomes stronger when near defeat.",
+  "jp_passive": "オーバー・ジャスティス: 敗北に近づくと強くなる。",
+  "ui_color": "Black"
+}
